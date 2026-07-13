@@ -45,12 +45,15 @@ export default function Hero() {
             className="text-white mb-6"
             style={{ fontSize: "clamp(2.2rem, 5vw, 3.8rem)", fontWeight: 800, lineHeight: 1.15 }}
           >
-            Zamonaviy <span style={{ color: "#5EEAD4" }}>Eshik</span> va{" "}
-            <span style={{ color: "#5EEAD4" }}>Romlar</span>
+            Zamonaviy{" "}
+            <span className="block sm:inline">
+              <span style={{ color: "#5EEAD4" }}>Eshik</span> va{" "}
+              <span style={{ color: "#5EEAD4" }}>Romlar</span>
+            </span>
           </h1>
 
           <p
-            className="mb-10"
+            className="mb-8 sm:mb-10"
             style={{
               color: "#cbd5e1",
               fontSize: "clamp(1rem, 2vw, 1.2rem)",
@@ -63,15 +66,16 @@ export default function Hero() {
             konsultatsiya — barchasi BEPUL!
           </p>
 
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
             <button
               type="button"
               onClick={() => scrollTo("contact")}
-              className="flex items-center gap-2 px-7 py-4 rounded-2xl text-white transition-all duration-200 hover:scale-105 hover:shadow-2xl cursor-pointer"
+              className="flex items-center justify-center gap-2 w-full sm:w-auto px-7 py-4 rounded-2xl text-white transition-all duration-200 hover:scale-[1.02] hover:shadow-2xl cursor-pointer"
               style={{
                 background: "linear-gradient(135deg, #013B41, #0F766E)",
                 fontWeight: 700,
                 fontSize: 16,
+                boxShadow: "0 8px 32px rgba(15,118,110,0.35)",
               }}
             >
               <Phone size={18} />
@@ -80,22 +84,22 @@ export default function Hero() {
             <button
               type="button"
               onClick={() => scrollTo("products")}
-              className="flex items-center gap-2 px-7 py-4 rounded-2xl transition-all duration-200 hover:scale-105 cursor-pointer"
+              className="flex items-center justify-center gap-2 w-full sm:w-auto px-7 py-4 rounded-2xl transition-all duration-200 hover:scale-[1.02] cursor-pointer"
               style={{
                 background: "rgba(255,255,255,0.12)",
-                border: "2px solid rgba(255,255,255,0.35)",
+                border: "1.5px solid rgba(255,255,255,0.35)",
                 color: "#fff",
                 fontWeight: 600,
                 fontSize: 16,
                 backdropFilter: "blur(8px)",
               }}
             >
-              Mahsulotlar
+              Mahsulotlarni ko'rish
               <ChevronDown size={18} />
             </button>
           </div>
 
-          <div className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div className="mt-10 sm:mt-16 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
             {STATS.map((s) => (
               <div
                 key={s.label}
