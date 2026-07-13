@@ -211,7 +211,7 @@ export default function Terms() {
             className="text-center mb-6"
             style={{ color: "#065f46", fontWeight: 700, fontSize: "1.2rem" }}
           >
-            Quyidagi xizmatlar mutlaqo BEPUL!
+            Quyidagi xizmatlarni ko'rsatamiz
           </h3>
           <div className="grid sm:grid-cols-3 gap-4">
             {["O'lchov olish", "O'rnatish xizmati", "Konsultatsiya"].map((item) => (

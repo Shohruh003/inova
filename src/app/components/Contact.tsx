@@ -93,7 +93,7 @@ export default function Contact() {
             Biz bilan aloqaga chiqing
           </h2>
           <p className="mt-3" style={{ color: "#64748b", fontSize: 16 }}>
-            Bepul konsultatsiya uchun hoziroq murojaat qiling
+            Konsultatsiya uchun hoziroq murojaat qiling
           </p>
         </div>
 

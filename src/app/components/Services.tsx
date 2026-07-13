@@ -5,25 +5,21 @@ const SERVICES = [
     icon: <Ruler size={32} />,
     title: "O'lchov olish",
     desc: "Mutaxassislarimiz uyingizga kelib aniq o'lchovlarni oladi.",
-    free: true,
   },
   {
     icon: <Truck size={32} />,
     title: "Yetkazib berish",
     desc: "Buyurtmangizni Farg'ona va atrofdagi hududlarga yetkazamiz.",
-    free: false,
   },
   {
     icon: <Wrench size={32} />,
     title: "O'rnatish",
     desc: "Professional ustalarimiz tomonidan sifatli va tezkor o'rnatish.",
-    free: true,
   },
   {
     icon: <Shield size={32} />,
     title: "Konsultatsiya",
-    desc: "Qaysi model siz uchun mosligi haqida bepul maslahat oling.",
-    free: true,
+    desc: "Qaysi model siz uchun mosligi haqida maslahat oling.",
   },
 ];
 
@@ -80,24 +76,7 @@ export default function Services() {
               <h3 style={{ color: "#012F33", fontWeight: 700, marginBottom: 10 }}>
                 {s.title}
               </h3>
-              <p
-                style={{ color: "#64748b", fontSize: 14, lineHeight: 1.7, marginBottom: 16 }}
-              >
-                {s.desc}
-              </p>
-              {s.free && (
-                <span
-                  className="inline-block px-3 py-1 rounded-full"
-                  style={{
-                    background: "#dcfce7",
-                    color: "#15803d",
-                    fontSize: 12,
-                    fontWeight: 700,
-                  }}
-                >
-                  BEPUL
-                </span>
-              )}
+              <p style={{ color: "#64748b", fontSize: 14, lineHeight: 1.7 }}>{s.desc}</p>
             </div>
           ))}
         </div>

@@ -885,7 +885,7 @@ export const STATS = [
 
 export const STEPS = [
   { num: "01", title: "Murojaat qiling", desc: "Telefon yoki Telegram orqali biz bilan bog'laning." },
-  { num: "02", title: "O'lchov", desc: "Mutaxassis kelib aniq o'lchovlarni oladi. Bepul!" },
+  { num: "02", title: "O'lchov", desc: "Mutaxassis kelib aniq o'lchovlarni oladi." },
   { num: "03", title: "Shartnoma", desc: "Narx va muddatni kelishib shartnoma imzalanadi." },
   { num: "04", title: "Ishlab chiqarish", desc: "Buyurtma 7–30 kun ichida tayyor bo'ladi." },
   { num: "05", title: "O'rnatish", desc: "Professional ustalarimiz tomonidan o'rnatish." },

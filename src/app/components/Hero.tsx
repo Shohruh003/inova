@@ -1,7 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import { ChevronDown, Phone, Star } from "lucide-react";
 import { IMAGES, SITE, STATS } from "@/src/lib/data";
+import logo from "@/public/logo.png";
 
 export default function Hero() {
   const scrollTo = (id: string) => {
@@ -24,6 +26,23 @@ export default function Hero() {
               "linear-gradient(120deg, rgba(1,47,51,0.85) 40%, rgba(15,118,110,0.55) 100%)",
           }}
         />
+
+        {/* Orqa fondagi xira logo (watermark) */}
+        <div
+          className="absolute pointer-events-none select-none
+                     bottom-[8%] right-[-12%] w-[70vw] max-w-[420px]
+                     md:bottom-auto md:top-1/2 md:-translate-y-1/2 md:right-[4%] md:w-[38vw] md:max-w-[560px]"
+          style={{ opacity: 0.07 }}
+        >
+          <Image
+            src={logo}
+            alt=""
+            aria-hidden
+            priority
+            className="w-full h-auto"
+            style={{ filter: "grayscale(1) brightness(3)" }}
+          />
+        </div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -63,7 +82,7 @@ export default function Hero() {
           >
             INOVA kompaniyasi tomonidan PVC va alyumin profillardan tayyorlangan eshik va romlar —
             Chimyon shaharchasidan O'zbekiston bo'ylab. O'lchov, yetkazib berish, o'rnatish va
-            konsultatsiya — barchasi BEPUL!
+            konsultatsiya xizmatlari mavjud.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
@@ -79,7 +98,7 @@ export default function Hero() {
               }}
             >
               <Phone size={18} />
-              Bepul konsultatsiya
+              Konsultatsiya olish
             </button>
             <button
               type="button"

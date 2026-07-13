@@ -153,7 +153,7 @@ export default async function ProductPage({
                   }}
                 >
                   <Ruler size={18} />
-                  Bepul o'lchov
+                  O'lchovga chaqirish
                 </Link>
               </div>
             </div>
@@ -301,8 +301,8 @@ export default async function ProductPage({
             {product.name} sizga mos keladimi?
           </h2>
           <p className="mt-3 mb-8" style={{ color: "rgba(255,255,255,0.75)", fontSize: 16, lineHeight: 1.7 }}>
-            Mutaxassisimiz bepul o'lchov olib, aniq narx va muddatni aytib beradi. O'lchov,
-            yetkazib berish va konsultatsiya — bepul.
+            Mutaxassisimiz o'lchov olib, aniq narx va muddatni aytib beradi. O'lchov, yetkazib
+            berish va o'rnatish xizmatlari mavjud.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a

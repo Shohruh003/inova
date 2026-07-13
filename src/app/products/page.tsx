@@ -11,7 +11,7 @@ import { TelegramIcon } from "@/src/app/components/icons";
 export const metadata: Metadata = {
   title: "Mahsulot katalogi — INOVA Rom va Eshik Tizimlari",
   description:
-    "INOVA to'liq katalogi: plastik va alyumin romlar, eshiklar, surilma va fasad tizimlari, import yechimlar va aksessuarlar. O'lchov va konsultatsiya bepul.",
+    "INOVA to'liq katalogi: plastik va alyumin romlar, eshiklar, surilma va fasad tizimlari, import yechimlar va aksessuarlar. O'lchov va konsultatsiya xizmatlari mavjud.",
 };
 
 export default function ProductsPage() {
@@ -82,8 +82,8 @@ export default function ProductsPage() {
             className="mt-3 mb-8"
             style={{ color: "rgba(255,255,255,0.75)", fontSize: 16, lineHeight: 1.7 }}
           >
-            Mutaxassisimiz bepul konsultatsiya berib, ehtiyojingizga mos yechimni tavsiya
-            qiladi. O'lchov, yetkazib berish va konsultatsiya — bepul.
+            Mutaxassisimiz konsultatsiya berib, ehtiyojingizga mos yechimni tavsiya qiladi.
+            O'lchov, yetkazib berish va o'rnatish xizmatlari mavjud.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
