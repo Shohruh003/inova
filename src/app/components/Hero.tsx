@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { ChevronDown, Phone, Star } from "lucide-react";
-import { IMAGES, SITE, STATS } from "@/src/lib/data";
+import { SITE, STATS } from "@/src/lib/data";
 import logo from "@/public/logo.png";
 
 export default function Hero() {
@@ -16,23 +16,25 @@ export default function Hero() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{ paddingTop: 80 }}
     >
-      <div className="absolute inset-0">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={IMAGES.hero} alt="INOVA eshik va rom" className="w-full h-full object-cover" />
+      <div
+        className="absolute inset-0"
+        style={{ background: "linear-gradient(135deg, #012F33 0%, #0B4F52 55%, #0F766E 100%)" }}
+      >
+        {/* Yumshoq yorug'lik dog'lari — fonni jonlantiradi */}
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 pointer-events-none"
           style={{
-            background:
-              "linear-gradient(120deg, rgba(1,47,51,0.85) 40%, rgba(15,118,110,0.55) 100%)",
+            backgroundImage:
+              "radial-gradient(circle at 78% 30%, rgba(94,234,212,0.18) 0%, transparent 55%), radial-gradient(circle at 10% 85%, rgba(15,118,110,0.35) 0%, transparent 50%)",
           }}
         />
 
-        {/* Orqa fondagi xira logo (watermark) */}
+        {/* Orqa fondagi logo */}
         <div
           className="absolute pointer-events-none select-none
-                     bottom-[8%] right-[-12%] w-[70vw] max-w-[420px]
-                     md:bottom-auto md:top-1/2 md:-translate-y-1/2 md:right-[4%] md:w-[38vw] md:max-w-[560px]"
-          style={{ opacity: 0.07 }}
+                     bottom-[6%] right-[-10%] w-[80vw] max-w-[460px]
+                     md:bottom-auto md:top-1/2 md:-translate-y-1/2 md:right-[5%] md:w-[40vw] md:max-w-[580px]"
+          style={{ opacity: 0.13 }}
         >
           <Image
             src={logo}
@@ -40,7 +42,7 @@ export default function Hero() {
             aria-hidden
             priority
             className="w-full h-auto"
-            style={{ filter: "grayscale(1) brightness(3)" }}
+            style={{ filter: "grayscale(1) brightness(2.6)" }}
           />
         </div>
       </div>
