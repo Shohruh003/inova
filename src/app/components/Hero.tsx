@@ -32,7 +32,7 @@ export default function Hero() {
         {/* Orqa fondagi logo */}
         <div
           className="absolute pointer-events-none select-none
-                     top-[10%] left-1/2 -translate-x-1/2 w-[72vw] max-w-[320px]
+                     top-[4%] left-1/2 -translate-x-1/2 w-[72vw] max-w-[320px]
                      md:left-auto md:translate-x-0 md:top-1/2 md:-translate-y-1/2 md:right-[5%] md:w-[40vw] md:max-w-[580px]"
           style={{ opacity: 0.16 }}
         >
