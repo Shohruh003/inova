@@ -68,7 +68,13 @@ export default function Footer() {
               Mahsulotlar
             </h4>
             <div className="flex flex-col gap-2">
-              {["PVC Termo 65", "PVC Termo 78", "Eshiklar", "Romlar"].map((item) => (
+              {[
+                "Plastik romlar",
+                "Alyumin romlar",
+                "Surilma tizimlari",
+                "Fasad tizimlari",
+                "Aksessuarlar",
+              ].map((item) => (
                 <span key={item} style={{ fontSize: 14 }}>
                   {item}
                 </span>

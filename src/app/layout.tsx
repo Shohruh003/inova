@@ -9,14 +9,15 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "INOVA — PVC Eshik va Romlar | Farg'ona, Chimyon",
+  title: "INOVA — Eshik va Romlar | Farg'ona, Chimyon",
   description:
-    "Farg'ona tumani, Chimyon qishlog'i. 14 yillik tajriba. Termo 65 va Termo 78 PVC profillari. O'lchov, yetkazib berish va o'rnatish bepul. 5 yil kafolat.",
+    "Farg'ona tumani, Chimyon shaharchasi. 14 yillik tajriba. PVC va alyumin profillardan eshik va romlar. O'lchov, yetkazib berish va o'rnatish bepul. 5 yil kafolat.",
   keywords: [
     "PVC eshik",
     "PVC rom",
-    "Termo 65",
-    "Termo 78",
+    "alyumin rom",
+    "surilma tizim",
+    "fasad tizimi",
     "Farg'ona",
     "Chimyon",
     "INOVA",
@@ -25,9 +26,9 @@ export const metadata: Metadata = {
     "rom o'rnatish",
   ],
   openGraph: {
-    title: "INOVA — PVC Eshik va Romlar",
+    title: "INOVA — Eshik va Romlar",
     description:
-      "14 yillik tajriba. Termo 65/78 PVC profillari. 5 yil kafolat. O'lchov, yetkazish va o'rnatish bepul.",
+      "14 yillik tajriba. PVC va alyumin profillardan eshik va romlar. 5 yil kafolat. O'lchov, yetkazish va o'rnatish bepul.",
     locale: "uz_UZ",
     type: "website",
   },

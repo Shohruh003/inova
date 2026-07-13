@@ -45,7 +45,7 @@ export default function Hero() {
             className="text-white mb-6"
             style={{ fontSize: "clamp(2.2rem, 5vw, 3.8rem)", fontWeight: 800, lineHeight: 1.15 }}
           >
-            Zamonaviy <span style={{ color: "#5EEAD4" }}>PVC Eshik</span> va{" "}
+            Zamonaviy <span style={{ color: "#5EEAD4" }}>Eshik</span> va{" "}
             <span style={{ color: "#5EEAD4" }}>Romlar</span>
           </h1>
 
@@ -58,8 +58,9 @@ export default function Hero() {
               maxWidth: 580,
             }}
           >
-            Chimyon qishlog'idagi INOVA kompaniyasi — Termo 65 va Termo 78 PVC profillari bo'yicha
-            ishonchli sherigingiz. O'lchov, yetkazib berish, o'rnatish va konsultatsiya — barchasi BEPUL!
+            INOVA kompaniyasi tomonidan PVC va alyumin profillardan tayyorlangan eshik va romlar —
+            Chimyon shaharchasidan O'zbekiston bo'ylab. O'lchov, yetkazib berish, o'rnatish va
+            konsultatsiya — barchasi BEPUL!
           </p>
 
           <div className="flex flex-wrap gap-4">
