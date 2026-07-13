@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { ChevronDown, Phone, Star } from "lucide-react";
-import { SITE, STATS } from "@/src/lib/data";
+import { IMAGES, SITE, STATS } from "@/src/lib/data";
 import logo from "@/public/logo.png";
 
 export default function Hero() {
@@ -16,16 +16,16 @@ export default function Hero() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{ paddingTop: 80 }}
     >
-      <div
-        className="absolute inset-0"
-        style={{ background: "linear-gradient(135deg, #012F33 0%, #0B4F52 55%, #0F766E 100%)" }}
-      >
-        {/* Yumshoq yorug'lik dog'lari — fonni jonlantiradi */}
+      <div className="absolute inset-0">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={IMAGES.hero} alt="INOVA eshik va rom" className="w-full h-full object-cover" />
+
+        {/* Rasm ustidagi brend gradienti */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
-            backgroundImage:
-              "radial-gradient(circle at 78% 30%, rgba(94,234,212,0.18) 0%, transparent 55%), radial-gradient(circle at 10% 85%, rgba(15,118,110,0.35) 0%, transparent 50%)",
+            background:
+              "linear-gradient(120deg, rgba(1,47,51,0.88) 40%, rgba(15,118,110,0.6) 100%)",
           }}
         />
 
