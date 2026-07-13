@@ -6,7 +6,7 @@ export const SITE = {
   telegram: "inova_akfa",
   instagram: "inova.akfa",
   mapUrl: "https://yandex.ru/maps/-/CPvWMW3V",
-  address: "Farg'ona tumani, Chimyon qishlog'i",
+  address: "Farg'ona tumani, Chimyon shaharchasi",
   hours: "Dushanba – Shanba, 09:00 – 18:00",
   experienceYears: 14,
   warrantyYears: 5,
@@ -75,69 +75,73 @@ export type Product = {
   highlights: { title: string | null; text: string }[];
 };
 
-// Mahsulot ma'lumotlari va rasmlar IMZO rasmiy saytidan (imzo.uz) olingan.
-// Diler sifatida foydalaniladi. Rasmlar: public/products/<slug>/
+// Mahsulot ma'lumotlari va rasmlar rasmiy diler sifatida joylashtirilgan.
+// Rasmlar: public/products/<slug>/
 export const PRODUCTS: Product[] = [
   {
-    slug: "rehau-artevo",
-    name: "Rehau ArtEvo",
+    slug: "akfa-7000",
+    name: "Akfa 7000",
     category: "plastikovye-okna",
     profile: "PVC profil",
     badge: "Premium",
     description:
-      "Rehau Artevo oynalari yuqori issiqlik va shovqin izolyatsiyasini ta'minlaydi, zamonaviy dizaynni ishonchlilik bilan uyg'unlashtiradi. Ushbu vinil derazalar ham turar-joy, ham tijorat joylari uchun mos bo'lib…",
-    features: [
-      "7 kamerali profil",
-      "Tavaqa balandligi 2800 mm",
-      "Tavaqa kengligi 1000 mm",
-      "Steklopaket 56 mm gacha",
-    ],
-    img: "/products/rehau-artevo/card.jpg",
-    banner: "/products/rehau-artevo/banner.webp",
-    specImg: "/products/rehau-artevo/spec.png",
-    specs: [
-      { label: "Profil turi", value: "PVX" },
-      { label: "Kameralar soni", value: "7" },
-      { label: "Tavaqaning maksimal balandligi", value: "2800 mm" },
-      { label: "Tavaqaning maksimal kengligi", value: "1000 mm" },
-      { label: "Steklopaket qalinligi", value: "56 mm gacha" },
-      { label: "Montaj chuqurligi", value: "80 mm" },
-      { label: "Issiqlik izolyatsiyasi", value: "0,98 m2 C/Vt" },
-    ],
-    highlights: [
-      { title: null, text: "Windows Rehau Artevo — Bu qulay mikroiqlim va zamonaviy interyer yaratish uchun innovatsion yechim. Artevo profilidan yasalgan derazalar o‘zining puxta o‘ylangan dizayni tufayli yuqori issiqlik va shovqin izolyatsiyasini ta’minlaydi va o‘rnatishni qisqa vaqt ichida yakunlash mumkin." },
-      { title: null, text: "Rehau Artevo tizimi turar-joy va jamoat binolarini yangi qurish uchun ham, ta'mirlash uchun ham javob beradi. Bu &mdash asosidagi ko'p qatlamli profillarni o'z ichiga oladi; issiqlik izolyatsiyasi xususiyatlarini yaxshilaydigan termal qo'shimchalar bilan bardoshli ramka. Alyuminiyning ikki qismidan yasalgan, mustahkamlangan shisha tolali shisha bilan bog'langan birlashtirilgan profillar strukturaga mustahkamlik va yuklarga qarshilik ko'rsatadi." },
-      { title: null, text: "Tizim, shuningdek, ishonchliligi va chidamliligi bilan ajralib turadigan koplanar eshiklarni yig'ish imkonini beradi. Rehau Artevo oynalari bitta mahsulotda energiya samaradorligi, uslub va ishonchlilikni qadrlaydiganlar uchun ajoyib tanlovdir." },
-    ],
-  },
-  {
-    slug: "rehau-euro-design-70",
-    name: "Rehau Euro-Design 70",
-    category: "plastikovye-okna",
-    profile: "PVC profil",
-    badge: "Ommabop",
-    description:
-      "Rehau Euro-Design 70 derazalari nafis dizaynni ishonchlilik bilan uyg'unlashtirib, mukammal issiqlik va ovoz izolyatsiyasini ta'minlaydi. Ushbu vinil oynalar turar-joy va tijorat ilovalari uchun ideal bo'lib…",
+      "Akfa 7000 — maksimal qulaylik va kafolatlangan komfort uchun energiya tejovchi PVC profil seriyasi. Besh kamerali profil va po'lat kuchaytirgich shaklini ishonchli saqlaydi, deformatsiyalanmaydi, issiqlikni ushlab turadi va ko'cha shovqinidan himoya qiladi.",
     features: [
       "5 kamerali profil",
-      "Tavaqa balandligi 2400 mm",
-      "Tavaqa kengligi 1000 mm",
       "Montaj chuqurligi 70 mm",
+      "Steklopaket 24–32 mm",
+      "Tavaqa og'irligi 80 kg gacha",
     ],
-    img: "/products/rehau-euro-design-70/card.jpg",
-    banner: "/products/rehau-euro-design-70/banner.webp",
-    specImg: "/products/rehau-euro-design-70/spec.png",
+    img: "/products/akfa-7000/card.jpg",
+    banner: "/products/akfa-7000/banner.jpg",
+    specImg: "/products/akfa-7000/spec.jpg",
     specs: [
       { label: "Profil turi", value: "PVX" },
       { label: "Kameralar soni", value: "5" },
-      { label: "Tavaqaning maksimal balandligi", value: "2400 mm" },
-      { label: "Tavaqaning maksimal kengligi", value: "1000 mm" },
       { label: "Montaj chuqurligi", value: "70 mm" },
-      { label: "Issiqlik izolyatsiyasi", value: "0,8 m² C/Vt" },
+      { label: "Steklopaket qalinligi", value: "24–32 mm" },
+      { label: "Kuchaytiruvchi profil qalinligi", value: "1,2 mm" },
+      { label: "Tavaqa og'irligi (rom)", value: "80 kg gacha" },
+      { label: "Tavaqa og'irligi (eshik)", value: "110 kg gacha" },
+      { label: "Tavaqaning maksimal o'lchami (rom)", value: "2000 × 1000 mm" },
+      { label: "Tavaqaning maksimal o'lchami (eshik)", value: "2000 × 900 mm" },
     ],
     highlights: [
-      { title: null, text: "Windows Rehau Euro-Design 70 — Bu uyda qulay mikroiqlimni ta'minlaydigan ishonchli va iqtisodiy yechim. O'rnatish chuqurligi 70 mm va besh kamerali profilga ega tizim mukammal issiqlik va shovqin izolyatsiyasini kafolatlaydi, bu esa uni turar-joy va tijorat binolarida foydalanish uchun ideal qiladi.." },
-      { title: null, text: "Rehau Euro-Design 70 turli me'moriy uslublar uchun mos bo'lib, dizayn va soyalarning katta tanlovini taklif etadi. Yaxshi o'ylangan profil dizayni va tashqi ta'sirlarga chidamliligi tufayli derazalar bardoshli va parvarish qilish oson. Bu bitta mahsulotda yuqori sifat, energiya tejamkorligi va nafis ko‘rinishni qidirayotganlar uchun eng maqbul yechimdir." },
+      { title: "Maksimal qulaylik", text: "Akfa 7000 energiya tejovchi profil seriyasi bo'lib, besh kamerasi va po'lat kuchaytirgichi shaklini ishonchli ushlab turadi, deformatsiyaga uchramaydi, issiqlikni saqlaydi va ko'cha shovqinini o'tkazmaydi." },
+      { title: null, text: "Iqlim nazorati ostidagi xonalar uchun ayniqsa dolzarb — isitish va konditsionerlashda tejashga imkon beradi. Zal, ish xonasi, kutubxona va yotoqxona uchun ajoyib yechim." },
+      { title: null, text: "Roto furnituralari taxminan 15 000 ochish-yopish tsikliga (~10 yil) sinovdan o'tgan — uzoq muddatli ishonchli xizmat." },
+    ],
+  },
+  {
+    slug: "penta-6500",
+    name: "Penta 6500",
+    category: "plastikovye-okna",
+    profile: "PVC profil",
+    badge: "Yangi",
+    description:
+      "Penta 6500 — Markaziy Osiyoning keskin kontinental iqlimi uchun ishlab chiqilgan yangi avlod besh kamerali PVC profil. Xonani harorat o'zgarishlari va shovqindan ishonchli himoya qiladi, kengaytirilgan yorug'lik ochilishi tabiiy nurni ko'proq o'tkazadi.",
+    features: [
+      "5 kamerali profil",
+      "Montaj chuqurligi 65 mm",
+      "Steklopaket 6–20 mm",
+      "Tavaqa og'irligi 60 kg gacha",
+    ],
+    img: "/products/penta-6500/card.png",
+    specs: [
+      { label: "Profil turi", value: "PVX" },
+      { label: "Kameralar soni", value: "5" },
+      { label: "Ramkani o'rnatish chuqurligi", value: "65 mm" },
+      { label: "Steklopaket qalinligi", value: "6–20 mm" },
+      { label: "Profilni mustahkamlovchi qalinligi", value: "1,2 mm" },
+      { label: "Tavaqa og'irligi (rom)", value: "60 kg gacha" },
+      { label: "Tavaqa og'irligi (eshik)", value: "100 kg gacha" },
+      { label: "Tavaqaning maksimal balandligi (rom/eshik)", value: "1650 / 1900 mm" },
+      { label: "Tavaqaning maksimal kengligi (rom/eshik)", value: "800 / 900 mm" },
+    ],
+    highlights: [
+      { title: null, text: "Penta 6500 — tasdiqlangan muhandislik yechimlari va zamonaviy texnologik ishlanmalarni o'zida mujassam etgan yangi besh kamerali PVC profil." },
+      { title: null, text: "Markaziy Osiyoning keskin kontinental iqlimi uchun mo'ljallangan: xonani harorat o'zgarishi va shovqindan himoya qiladi, uzoq davom etadigan quyosh nuri va yuklarga chidamli." },
+      { title: null, text: "Profil dizayni yorug'lik ochilishini kengaytiradi va ko'proq tabiiy yorug'lik kiritadi. Keng laminatsiya tanlovi har qanday interyerga mos keladi." },
     ],
   },
   {
@@ -147,7 +151,7 @@ export const PRODUCTS: Product[] = [
     profile: "PVC profil",
     badge: "Hamyonbop",
     description:
-      "TRIO 60 tizimi - ixcham profildan ishlab chiqarilgan va yuqori yorug'lik o'tkazuvchanligiga ega konstruksiyalar. IMZO dan Trio 60 oynalari zamonaviy dizayn, ishonchlilik va energiya samaradorligini o'zida mujassam etgan…",
+      "TRIO 60 tizimi - ixcham profildan ishlab chiqarilgan va yuqori yorug'lik o'tkazuvchanligiga ega konstruksiyalar. INOVA dan Trio 60 oynalari zamonaviy dizayn, ishonchlilik va energiya samaradorligini o'zida mujassam etgan…",
     features: [
       "3 kamerali profil",
       "Profil devori 2,8 mm",
@@ -169,8 +173,8 @@ export const PRODUCTS: Product[] = [
     ],
     highlights: [
       { title: null, text: "TRIO 60 PVX tizimlari Markaziy Osiyo iqlimi sharoitlarini hisobga olgan holda yaratilgan.Trio 60 haqiqatan ham O‘zbekistonda eng mashhur rom modellaridan biri hisoblanadi. Trio 60’ning mashhurligi uning mukammal sifati, ajoyib texnik xususiyatlari va hamyonbop narxi bilan bog‘liq.TRIO romlari boshqa PVX romlariga qaraganda ancha bardoshli va energiya tejamkor hisoblanadi. TRIO uyingizda shinam muhit yaratadi." },
-      { title: null, text: "IMZO Trio 60 romlari Markaziy Osiyoning o‘zgaruvchan iqlimdan qo‘rqmaydi! Biz barcha standartlarga rioya qilib, mustahkamlik va germetiklikka alohida e'tibor qaratdik. Ushbu seriyadagi profillar an'anaviy plastik derazalarga qaraganda ko'proq issiqlikni saqlaydi va uzoq vaqt davomida xizmat qiladi. TRIO 60 bizning shourumlarimizdagi eng mashhur modellardan biri hisoblanadi. Agar siz ishonchlilik, soddalik va qulaylikni yaxshi ko'rsangiz, IMZO Trio seriyasini tanlang." },
-      { title: null, text: "IMZO TRIO 6000 seriyasi ajoyib tashqi ko‘rinishga ega bo‘lib, issiqlikni saqlash va ko'cha shovqinidan himoya qilish bo'yicha mukammal ko'rsatkichlarga ega.Ushbu profil seriyasining asosiy afzalliklari - 2,8 mm li devor qalinligi hamda qo'shimcha rezinali zichlagichni o'rnatish imkoniyatidir. Trio 60 energiya yo'qotishlarini kamaytirishga va pulni tejashga yordam beradi. Ushbu romlar sizning uyingizni yelvizak, sovuq, namlik va quyoshdan ishonchli himoyalaydi." },
+      { title: null, text: "INOVA Trio 60 romlari Markaziy Osiyoning o‘zgaruvchan iqlimdan qo‘rqmaydi! Biz barcha standartlarga rioya qilib, mustahkamlik va germetiklikka alohida e'tibor qaratdik. Ushbu seriyadagi profillar an'anaviy plastik derazalarga qaraganda ko'proq issiqlikni saqlaydi va uzoq vaqt davomida xizmat qiladi. TRIO 60 bizning shourumlarimizdagi eng mashhur modellardan biri hisoblanadi. Agar siz ishonchlilik, soddalik va qulaylikni yaxshi ko'rsangiz, INOVA Trio seriyasini tanlang." },
+      { title: null, text: "INOVA TRIO 6000 seriyasi ajoyib tashqi ko‘rinishga ega bo‘lib, issiqlikni saqlash va ko'cha shovqinidan himoya qilish bo'yicha mukammal ko'rsatkichlarga ega.Ushbu profil seriyasining asosiy afzalliklari - 2,8 mm li devor qalinligi hamda qo'shimcha rezinali zichlagichni o'rnatish imkoniyatidir. Trio 60 energiya yo'qotishlarini kamaytirishga va pulni tejashga yordam beradi. Ushbu romlar sizning uyingizni yelvizak, sovuq, namlik va quyoshdan ishonchli himoyalaydi." },
       { title: null, text: "Biz zamonaviy muhandislik ishlanmalari bilan birgalikda yillar davomida tasdiqlangan yechimlardan foydalandik - Trio 60'da mustahkamlangan profil, argon bilan to'ldirilgan energiya tejovchi steklopaketlar mavjud. TRIO 60 tizimi klassik dizayn va ajoyib samaradorlik parametrlarining uyg‘unligidir. Trio 60 bilan sizning uyingiz haqiqatan ham himoyalangan bo‘ladi." },
     ],
   },
@@ -181,7 +185,7 @@ export const PRODUCTS: Product[] = [
     profile: "PVC profil",
     badge: "Ommabop",
     description:
-      "IMZO Quattro 60 - yuqori darajadagi yorug‘lik o'tkazuvchanligiga ega romlar. Qo‘shimcha yorug‘lik xonani keng qiladi, samaradorlikni oshiradi va sizga ijobiy kayfiyat baxsh etadi.",
+      "INOVA Quattro 60 - yuqori darajadagi yorug‘lik o'tkazuvchanligiga ega romlar. Qo‘shimcha yorug‘lik xonani keng qiladi, samaradorlikni oshiradi va sizga ijobiy kayfiyat baxsh etadi.",
     features: [
       "4 kamerali profil",
       "Profil devori 2,2 mm",
@@ -202,8 +206,8 @@ export const PRODUCTS: Product[] = [
     highlights: [
       { title: null, text: "Quattro - shovqin va issiqlik izolatsiyasi bo‘yicha yuqori talablar qo‘yiladigan ofis, jamoat binolari va xonadonlar uchun ajoyib yechim. Kumush rangiga bo'yalgan tutqich va Vinchester laminatsiyasidagi deraza interyeringizga oziga xoslik beradi." },
       { title: null, text: "Quattro 60 to'rt kamerali tizim bo‘lib, shovqin va issiqlik izolatsiyasi bo‘yicha yuqori talablar qo‘yiladigan ofis, jamoat binolari va xonadonlar uchun ajoyib yechim. Kumush rangiga bo'yalgan tutqich va Vinchester laminatsiyasidagi deraza interyeringizga oziga xoslik beradi." },
-      { title: null, text: "Yog‘och laminatsiyasiga ega Quattro 6000 - jozibali nafislik timsolidir. Keng formatli oyna yuqori yorug‘lik o‘tkazuvchanlik xususiyatlariga ega. 20 mm qalinlikdagi steklopaket optimal ekspluatatsion ko'rsatkichlariga ega. Modelning nafisligi har qanday interyerga mos keladi. Imzo 60 Quattro to'rt kamerali tizimi turar-joy binolari, ma'muriy, xizmat ko'rsatish va jamoat binolari uchun ajoyib yechim. Profil hamyonbop narx, yuqori sifatli furnituralar va mukammal texnik xususiyatlar bilan ajralib turadi." },
-      { title: null, text: "IMZO'dan Quattro 60 oynalari zamonaviy uslub, ishonchlilik va yuqori energiya samaradorligini o'zida mujassam etgan oynali tizimdir. Bu turar-joy va tijorat ilovalari uchun ideal tanlov bo'lib, maksimal qulaylik va chidamlilikni ta'minlaydi. Bundan tashqari, Quattro 60 derazalari oshxona uchun juda mos keladi: ular quyosh nuri o'tishiga imkon beradi, yorqin va qulay muhit yaratadi, shu bilan birga changning kirib kelishini samarali oldini oladi." },
+      { title: null, text: "Yog‘och laminatsiyasiga ega Quattro 6000 - jozibali nafislik timsolidir. Keng formatli oyna yuqori yorug‘lik o‘tkazuvchanlik xususiyatlariga ega. 20 mm qalinlikdagi steklopaket optimal ekspluatatsion ko'rsatkichlariga ega. Modelning nafisligi har qanday interyerga mos keladi. Inova 60 Quattro to'rt kamerali tizimi turar-joy binolari, ma'muriy, xizmat ko'rsatish va jamoat binolari uchun ajoyib yechim. Profil hamyonbop narx, yuqori sifatli furnituralar va mukammal texnik xususiyatlar bilan ajralib turadi." },
+      { title: null, text: "INOVA'dan Quattro 60 oynalari zamonaviy uslub, ishonchlilik va yuqori energiya samaradorligini o'zida mujassam etgan oynali tizimdir. Bu turar-joy va tijorat ilovalari uchun ideal tanlov bo'lib, maksimal qulaylik va chidamlilikni ta'minlaydi. Bundan tashqari, Quattro 60 derazalari oshxona uchun juda mos keladi: ular quyosh nuri o'tishiga imkon beradi, yorqin va qulay muhit yaratadi, shu bilan birga changning kirib kelishini samarali oldini oladi." },
     ],
   },
   {
@@ -275,51 +279,37 @@ export const PRODUCTS: Product[] = [
     ],
   },
   {
-    slug: "thermo-64-engelberg",
-    name: "Thermo 64 Engelberg",
+    slug: "aldoks",
+    name: "Aldoks",
     category: "alyuminievye-okna",
     profile: "Alyumin profil",
     badge: "Yangi",
     description:
-      "Thermo 64 Engelberg — IMZO'ning termo ko'prikli yangi alyumin rom va eshik tizimi. Batafsil texnik ma'lumotlar uchun biz bilan bog'laning.",
+      "Aldoks — noyob me'moriy ko'rinish yaratish imkonini beruvchi alyumin rom va eshik tizimi. Mustahkam va nafis dizayn, egri, qavariq yoki siniq shakllarni amalga oshirishga imkon beruvchi moslashuvchan tizim.",
     features: [
-      "Termo ko'prikli tizim",
-      "Yangi avlod profili",
-      "Rom va eshiklar uchun",
-      "Ma'lumot: so'rov bo'yicha",
+      "Alyumin (sovuq) profil",
+      "Montaj chuqurligi 45,5 mm",
+      "Steklopaket 4–20 mm",
+      "450+ rang varianti",
     ],
-    img: "/products/thermo-64-engelberg/card.jpg",
-    specs: [],
-    highlights: [],
-  },
-  {
-    slug: "thermo-85-engelberg",
-    name: "Thermo 85 Engelberg",
-    category: "alyuminievye-okna",
-    profile: "Alyumin profil",
-    badge: "Yangi",
-    description:
-      "Thermo 85 Engelberg — IMZO'ning yangi avlod alyumin tizimi. Mukammal issiqlik izolyatsiyasi va zamonaviy dizayn uyg'unligi, turar-joy va tijorat binolari uchun.",
-    features: [
-      "Termo ko'prik 39 mm",
-      "Montaj chuqurligi 85 mm",
-      "Tavaqa balandligi 2100 mm",
-      "Tavaqa kengligi 1200 mm",
-    ],
-    img: "/products/thermo-85-engelberg/card.jpg",
-    specImg: "/products/thermo-85-engelberg/spec.png",
+    img: "/products/aldoks/card.jpg",
+    banner: "/products/aldoks/banner.jpg",
+    specImg: "/products/aldoks/spec.jpg",
     specs: [
-      { label: "Profil turi", value: "Alyuminiy" },
-      { label: "Profil seriyasi", value: "Issiq" },
-      { label: "Tavaqaning maksimal balandligi", value: "2100 mm" },
-      { label: "Tavaqaning maksimal kengligi", value: "1200 mm" },
-      { label: "Montaj chuqurligi", value: "85 mm" },
-      { label: "Termo ko'prik kengligi", value: "39 mm" },
+      { label: "Profil turi", value: "Alyumin" },
+      { label: "Profil seriyasi", value: "Sovuq" },
+      { label: "Montaj chuqurligi", value: "45,5 mm" },
+      { label: "Steklopaket qalinligi", value: "4–20 mm" },
+      { label: "Tavaqa og'irligi (rom)", value: "80 kg gacha" },
+      { label: "Tavaqa og'irligi (eshik)", value: "140 kg gacha" },
+      { label: "Tavaqaning maksimal o'lchami (rom)", value: "1800 × 1000 mm" },
+      { label: "Tavaqaning maksimal o'lchami (eshik)", value: "2500 × 1500 mm" },
+      { label: "Qoplama", value: "Anodlash, RAL ranglari, Laminatsiya" },
     ],
     highlights: [
-      { title: "Yuqori issiqlik izolyatsiyasi", text: "Poliamiddan tayyorlangan o'rnatilgan termo ko'prikli profillar sifatli ikki kamerali steklopaket bilan birgalikda uyingizda issiqlikni saqlaydi va energiya xarajatlarini kamaytiradi." },
-      { title: "Zamonaviy dizayn", text: "Thermo 85 — zamonaviy qat'iy dizayn, ekologik toza va xavfsiz materiallar hamda yuqori mustahkamlikning uyg'un kombinatsiyasi." },
-      { title: "Mustahkam konstruksiya", text: "Sindirish yoki deformatsiya qilish qiyin bo'lgan mustahkam romlar kerakmi? Thermo 85 alyumin tizimini tanlang — u uzoq yillar xizmat qiladi." },
+      { title: "Yangi format derazalar", text: "Aldoks rom va eshik tizimlari noyob me'moriy ko'rinish yaratish va eng dadil g'oyalarni amalga oshirish imkonini beradi. Mustahkam va nafis dizayn." },
+      { title: "Moslashuvchan tizim", text: "Tizim turli shakllarni — botiq, qavariq, siniq va boshqalarni yaratishga imkon beradi. Alyumin konstruksiyalarning xizmat muddati 80 yildan oshadi." },
+      { title: null, text: "Zamonaviy kukunli bo'yash texnologiyasi 450+ rang va qoplama variantini beradi: metallik, anodlangan, mat/yaltiroq RAL ranglari." },
     ],
   },
   {
@@ -329,7 +319,7 @@ export const PRODUCTS: Product[] = [
     profile: "Alyumin profil",
     badge: "Hamyonbop",
     description:
-      "IMZO Champion alyuminiy tizimidan tayyorlangan konstruktsiyalar asosan balkonlar va lodjiyalarni sovuq oynalashda hamda issiqlik izolyatsiyasi bo‘yicha talablari yuqori bo'lmagan binolarda ishlatiladi.",
+      "INOVA Champion alyuminiy tizimidan tayyorlangan konstruktsiyalar asosan balkonlar va lodjiyalarni sovuq oynalashda hamda issiqlik izolyatsiyasi bo‘yicha talablari yuqori bo'lmagan binolarda ishlatiladi.",
     features: [
       "Profil devori 1,1 mm",
       "Tavaqa balandligi 2200 mm",
@@ -390,47 +380,13 @@ export const PRODUCTS: Product[] = [
     ],
   },
   {
-    slug: "thermo-65-engelberg",
-    name: "Thermo 65 Engelberg",
-    category: "alyuminievye-okna",
-    profile: "Alyumin profil",
-    badge: "Ommabop",
-    description:
-      "IMZO kompaniyasining Thermo 65 Engelberg derazalari yuqori issiqlik izolyatsiyasi va zamonaviy uslubni ta'minlaydi. Ushbu alyuminiy derazalar ishonchlilik va chidamlilikni qulaylik va nafislik bilan uyg'unlashtirgan…",
-    features: [
-      "3 kamerali profil",
-      "Profil devori 1,4 mm",
-      "Tavaqa balandligi 2500 mm",
-      "Tavaqa kengligi 1600 mm",
-    ],
-    img: "/products/thermo-65-engelberg/card.jpg",
-    banner: "/products/thermo-65-engelberg/banner.jpg",
-    specImg: "/products/thermo-65-engelberg/spec.png",
-    specs: [
-      { label: "Profil turi", value: "Alyumin" },
-      { label: "Profil seriyasi", value: "Issiq" },
-      { label: "Kameralar soni", value: "3" },
-      { label: "Profil devorining qalinligi", value: "1,4 mm" },
-      { label: "Tavaqaning maksimal balandligi", value: "2500 mm" },
-      { label: "Tavaqaning maksimal kengligi", value: "1600 mm" },
-      { label: "Steklopaket qalinligi", value: "6-32 mm" },
-      { label: "Qoplama", value: "Anodlash, RAL ranglari, Laminatsiya" },
-      { label: "Montaj chuqurligi", value: "65 mm" },
-    ],
-    highlights: [
-      { title: null, text: "Poliamidli termo ko‘prik va yuqori sifatli steklopaketlar uyingizni ko'cha shovqinidan va issiqlik yo'qotilishidan himoya qiladi. Bunday romlar bilan uyingiz har qanday ob-havo sharoitlariga tayyori! Thermo 65 sifatli, puxta o'ylangan va zamonaviy uyni qadrlovchilar tanlovi" },
-      { title: null, text: "Thermo 65 zamonaviy va nafis dizayn, ekologik toza va xavfsiz materiallar hamda yuqori darajadagi issiqlik va shovqin izolyatsiyasining uyg'unligidir. Markaziy Osiyo iqlimida barcha sifat va qulaylik talablariga javob beradigan rom tizimi." },
-      { title: null, text: "Sizga sinmaydigan va deformatsiyalangan mustahkam romlar kerakmi? Termo 65 romlarini tanlang. Ushbu tizim faol foydalanish uchun mo'ljallangan, korroziyaga va ob-havo o'zgarishlariga chidamli, quyosh, yomg'ir va sovuqdan qo'rqmaydi. To'g'ri o'rnatilgan Thermo 65 rom tizimi sizga ko‘p yillar davomida xizmat qiladi." },
-    ],
-  },
-  {
     slug: "thermo-78-engelberg",
     name: "Thermo 78 Engelberg",
     category: "alyuminievye-okna",
     profile: "Alyumin profil",
     badge: "Premium",
     description:
-      "Thermo 78 - xonadonlar va uchastkalar uchun eng zamonaviy taklif. Thermo 78 modeli atrof-muhit ta'siriga va har qanday ob-havo sharoitlariga bardosh bera oladi. IMZO'dan Thermo 78 Engelberg derazalari yuqori issiqlik…",
+      "Thermo 78 - xonadonlar va uchastkalar uchun eng zamonaviy taklif. Thermo 78 modeli atrof-muhit ta'siriga va har qanday ob-havo sharoitlariga bardosh bera oladi. INOVA'dan Thermo 78 Engelberg derazalari yuqori issiqlik…",
     features: [
       "Profil devori 1,4-1,9 mm",
       "Tavaqa balandligi 2600 mm",
@@ -512,97 +468,7 @@ export const PRODUCTS: Product[] = [
     ],
     highlights: [
       { title: null, text: "Sinov namunasiga ta'sir qiluvchi kuch — mayatnikning tushishi natijasida hosil bo'lgan kinetik energiya hisoblanadi (Djouldan o‘lchanadi). Ushbu sinovlar Fransiyaning NFP qoidalariga muvofiq ishlab chiqilgan 50 kilogrammli shisha bilan to'ldirilgan qop bilan ham amalga oshirilishi mumkin." },
-      { title: null, text: "IMZO’dan Thermo 105 Engelberg derazalari mukammal energiya samaradorligi va zamonaviy dizaynni taklif etadi. Ushbu alyuminiy oynalar turar-joy va tijorat joylari uchun ideal bo'lib, butun umr davomida ishonchlilik, chidamlilik va qulaylikni ta'minlaydi. Profil bozordagi eksklyuzivlardan biri bo'lib, uning o'ziga xos xususiyatlari va afzalliklarini ta'kidlaydi." },
-    ],
-  },
-  {
-    slug: "mdf-40",
-    name: "MDF 40",
-    category: "doors",
-    profile: "Eshik tizimi",
-    badge: "Ommabop",
-    description:
-      "IMZO xonalararo eshiklari yuqori sifatli va mustahkam mahsulot bo‘lib, sizning interyeringiz uchun mos keladi.",
-    features: [
-      "Profil devori 1,5 mm",
-      "Tavaqa balandligi 2700 mm",
-      "Tavaqa kengligi 1000 mm",
-      "Montaj chuqurligi Devor yuzasi",
-    ],
-    img: "/products/mdf-40/card.jpg",
-    banner: "/products/mdf-40/banner.jpg",
-    specImg: "/products/mdf-40/spec.png",
-    specs: [
-      { label: "Profil turi", value: "Alyumin" },
-      { label: "Profil devorining qalinligi", value: "1,5 mm" },
-      { label: "Tavaqaning maksimal balandligi", value: "2700 mm" },
-      { label: "Tavaqaning maksimal kengligi", value: "1000 mm" },
-      { label: "Montaj chuqurligi", value: "Devor yuzasi" },
-      { label: "Obnalichka kengligi", value: "50 mm" },
-      { label: "Oyna qalinligi", value: "6 mm" },
-    ],
-    highlights: [
-      { title: null, text: "IMZO xonalararo eshiklari yuqori sifatli va mustahkam mahsulot bo‘lib, sizning interyeringiz uchun mos keladi. Ichki eshiklar turar-joy binolari, ofislar, bolalar bog'chalari, maktablar, mehmonxonalar, tibbiyot muassasalari va binolarda o'rnatish uchun mo'ljallangan." },
-      { title: null, text: "IMZO o'zining innovatsion texnologiyalari va yuqori sifatli mahsulotlari bilan mashhur. Biz yog'och massivi, MDF va alyuminiy kabi yuqori sifatli materiallardan foydalanamiz, bu esa mahsulotlarining mustahkamligini ta'minlaydi. Biz har bir mijozga individual tarzda yondashamiz." },
-      { title: null, text: "IMZO kompaniyasining MDF 40 eshik tizimlari uslub va funksionallikning mukammal kombinatsiyasini taklif etadi. Ushbu eshiklar mukammal ovoz yalıtımını ta'minlaydi va turar-joy va tijorat joylari uchun mos keladi, qulay muhit va ishonchli himoya yaratadi." },
-    ],
-  },
-  {
-    slug: "invisible-door",
-    name: "Invisible Door",
-    category: "doors",
-    profile: "Eshik tizimi",
-    badge: "Premium",
-    description:
-      "IMZO kompaniyasining Invisible Door interyer dizayniga innovatsion va zamonaviy yondashuvni taklif etadi. Yashirin menteşali bu eshiklar minimalizm va estetika muhim bo'lgan turar-joy va tijorat joylari uchun ideal…",
-    features: [
-      "Yashirin qutili eshik",
-      "Devor bilan bir tekisda",
-      "Minimalistik dizayn",
-      "Ichki makonlar uchun",
-    ],
-    img: "/products/invisible-door/card.jpg",
-    specs: [],
-    highlights: [
-      { title: null, text: "Ko‘rinmas eshiklar yanada ko‘p bo'sh joyni yaratadi. Quyosh nurlari insonga kuch-quvvat beradi va uyda qulaylik yaratadi." },
-      { title: null, text: "Ko‘rinmas eshiklarni alyuminiydan yasalgan surilma eshiklar bilan birgalikda mukammal tarzda ishlatilsa bo‘ladi." },
-      { title: null, text: "IMZO ko‘p funksiyali eshiklarni taklif qiladi. Xonalararo eshiklar jamoat joylarida o'rnatish uchun mo'ljallangan. Ushbu eshiklar konstruksiya mustahkamligi va xavfsizligi, yuqori darajadagi shovqin izolyatsiyasi va ajoyib dizayn bilan ajralib turadi." },
-      { title: null, text: "Metall ramkali eshik bloki tashrif buyuruvchilarning oqimi yuqori bo‘lgan ma'muriy va ofis binolari uchun eng yaxshi yechim." },
-    ],
-  },
-  {
-    slug: "bkh-20",
-    name: "BKH 20",
-    category: "razdvizhnye-sistemy",
-    profile: "Surilma tizim",
-    badge: "Hamyonbop",
-    description:
-      "BKH 20 tizimi universal surilma to‘siqni yaratishga imkon beradi. Oson o‘rnatiladigan tizim yorug'lik va shovqindan himoya qiluvchi maydonini yaratadi.",
-    features: [
-      "Tavaqa balandligi 2500 mm",
-      "Tavaqa kengligi 700 mm",
-      "Steklopaket 8-10 mm",
-      "Qoplama Anodlash, RAL ranglari, Laminatsiya",
-    ],
-    img: "/products/bkh-20/card.jpg",
-    banner: "/products/bkh-20/banner.jpg",
-    specImg: "/products/bkh-20/spec.png",
-    specs: [
-      { label: "Profil turi", value: "Alyumin" },
-      { label: "Tavaqaning maksimal balandligi", value: "2500 mm" },
-      { label: "Tavaqaning maksimal kengligi", value: "700 mm" },
-      { label: "Steklopaket qalinligi", value: "8-10 mm" },
-      { label: "Qoplama", value: "Anodlash, RAL ranglari, Laminatsiya" },
-      { label: "Tizim turi", value: "Xonalararo" },
-      { label: "Qopqoqning ko'rinadigan qismining kengligi", value: "20 mm" },
-      { label: "Profilning montaj kengligi (ikki relsali)", value: "133 mm" },
-      { label: "Profilning montaj kengligi (uch relsali)", value: "255 mm" },
-    ],
-    highlights: [
-      { title: null, text: "Osma surilma tizim - BKH 20 surilma tizimi xonani zonalashtirish masalasini hal qilishga yordam beradi. Ushbu tizim yordamida xona turli zonalarga bo'linadi, tabiiy quyosh nuri esa xonaning butun maydoniga uzatiladi." },
-      { title: null, text: "Surilma tizimlar benuqson ko'rinishga ega bo‘lib, amaliylik, funksionallik va ergonomiklik bilan ajralib turadi." },
-      { title: null, text: "BKH 20 tizimi sizga maydondan samarali foydalanib, ichki makonni zonalash yoki birlashtirish imkonini beradi. Mexanizmning sinxron ochilishi eshiklarni qulaylik va tezlik bilan ochish imkonini beradi. Ushbu tizimning katta afzalligi uning arzonligi va mukammal funksionalligidan iborat." },
-      { title: "Maksimal funksionallik", text: "BKH 20 tizimining asosiy afzalligi uning universalligidan iborat. Uning yordamida siz xona ichida turli zonalarni yaratishingiz mumkin. Tizim konstruksiyasi to‘siqning o'lchami va shaklini osongina o'zgartirishga imkon beradi. Uni ofislar, do'konlar, restoranlar, mehmonxonalar va boshqa binolarda o‘rnatishingiz mumkin." },
+      { title: null, text: "INOVA’dan Thermo 105 Engelberg derazalari mukammal energiya samaradorligi va zamonaviy dizaynni taklif etadi. Ushbu alyuminiy oynalar turar-joy va tijorat joylari uchun ideal bo'lib, butun umr davomida ishonchlilik, chidamlilik va qulaylikni ta'minlaydi. Profil bozordagi eksklyuzivlardan biri bo'lib, uning o'ziga xos xususiyatlari va afzalliklarini ta'kidlaydi." },
     ],
   },
   {
@@ -636,7 +502,7 @@ export const PRODUCTS: Product[] = [
       { title: null, text: "Estetika va chidamlilik. Jismoniy, kimyoviy va biologik ta'sirlarga chidamlilik cheksiz xizmat muddatini ta'minlaydi. Alyumin profillar ajoyib estetik ko'rinishga ega. Ushbu tizimni RAL palitrasidan istalgan rangga bo'yash mumkin." },
       { title: null, text: "Issiqlik izolyatsiyasi va bo'sh joy. Alyuminiydan yasalgan yuqori issiqlik izolatsiyasiga ega surilma eshiklar qishki bog‘, balkon va terrasada keng makon yaratad. Alyuminiyning o'ta yuqori mustahkamligi tufayli maksimal shaffofligini va kunduzgi yorug'likning kirib borishini ta'minlaydigan panoramali konstruksiyalarni amalga oshirish mumkin." },
       { title: null, text: "BKH 65 panoramali surilma tizimi tabiat bilan uyg‘unlikning vizual effektini yaratadi, bu esa sizga qulay sharoitlarda landshaft manzaralaridan bahramand bo‘lish imkonini beradi. BKH 65 maksimal yorug‘likni ta'minlaydi va yashash maydonini vizual ravishda kengaytiradi." },
-      { title: null, text: "IMZO dan BKH 65 derazalari yuqori quvvat va energiya samaradorligini ta'minlaydigan alyuminiy profilli zamonaviy oynalar tizimidir." },
+      { title: null, text: "INOVA dan BKH 65 derazalari yuqori quvvat va energiya samaradorligini ta'minlaydigan alyuminiy profilli zamonaviy oynalar tizimidir." },
     ],
   },
   {
@@ -675,7 +541,7 @@ export const PRODUCTS: Product[] = [
     profile: "Import tizim",
     badge: "Import",
     description:
-      "Tiara Twinmax ramkasiz tizimi funksionalligi va vizual jozibadorligi bilan ajralib turadi. Sizning balkoningizni qulay va shinam makonga aylantiradi. IMZO’dan Tiara Twinmax oynalari zamonaviy dizayn va yuqori energiya…",
+      "Tiara Twinmax ramkasiz tizimi funksionalligi va vizual jozibadorligi bilan ajralib turadi. Sizning balkoningizni qulay va shinam makonga aylantiradi. INOVA’dan Tiara Twinmax oynalari zamonaviy dizayn va yuqori energiya…",
     features: [
       "Steklopaket 20-50 mm",
       "Qoplama Anodlash, RAL ranglari, laminatsiya",
@@ -708,7 +574,7 @@ export const PRODUCTS: Product[] = [
     profile: "Import tizim",
     badge: "Import",
     description:
-      "Turar-joy va tijorat binolarida panoramali oynalash uchun vertikal ko'tarish tizimiga ega innovatsion derazalar. Masofadan boshqarish pulti yoki smartfon yordamida boshqariladi. IMZO kompaniyasining gilyotin tizimlari…",
+      "Turar-joy va tijorat binolarida panoramali oynalash uchun vertikal ko'tarish tizimiga ega innovatsion derazalar. Masofadan boshqarish pulti yoki smartfon yordamida boshqariladi. INOVA kompaniyasining gilyotin tizimlari…",
     features: [
       "Vertikal surilma oyna",
       "Restoran va ayvonlar uchun",
@@ -718,7 +584,7 @@ export const PRODUCTS: Product[] = [
     img: "/products/gilyotina-tizimi/card.jpg",
     specs: [],
     highlights: [
-      { title: null, text: "IMZO mashhur Albert Genau brendidan Vertiflex gilyotina tizimlarini taklif etadi. Gilyotina panoramali oynalarining bir turi bo'lib, uning yordamida har qanday ob-havoda qulay vaqt o'tkazish uchun individual joy yaratishingiz mumkin." },
+      { title: null, text: "INOVA mashhur Albert Genau brendidan Vertiflex gilyotina tizimlarini taklif etadi. Gilyotina panoramali oynalarining bir turi bo'lib, uning yordamida har qanday ob-havoda qulay vaqt o'tkazish uchun individual joy yaratishingiz mumkin." },
       { title: null, text: "Vertiflex gilyotin tizimlari Yevropa standartlariga mos keladi va mehmonxonalar, kafelar, restoranlar va yozgi teraslarni oynalash uchun qo‘llaniladi." },
       { title: null, text: "Gilyotin tizimlari - vertikal ochiladigan panoramali oynalarning yangi turi. Gilyotina tizimlarini masofadan boshqarish pulti yoki aqlli uy tizimiga ulangan smartfon yordamida boshqarishingiz mumkin." },
       { title: null, text: "Gilyotina tizimi maxsus SafeGuard siqish mexanizmi bilan jihozlangan. Ushbu mexanizm zanjirning uzilishi bilan bog'liq muammolarni bartaraf etishga yordam beradi. Sizning qulayligingiz va xavfsizligingizni ta'minlash uchun gilyotina tizimlarining pastki qopqog'i tashqaridan olinmaydigan qilib ishlab chiqilgan. Maxsus profil barmoqlarni chimchilashdan himoya qiladi." },
@@ -749,8 +615,8 @@ export const PRODUCTS: Product[] = [
       { label: "Boshqarish variantlari", value: "Avtomatika, pult orqali" },
     ],
     highlights: [
-      { title: null, text: "IMZO avtomatik tomi suriladigan pergolalarni taklif qiladi. Pergolaning tayanch konstruksiyasi yuqori sifatli alyuminiy profildan qilingan. Pergola tomi alyuminiy qovurg'ali PVX profillaridan iborat bo'lib, ular maxsus relslar bo'ylab ovozsiz harakatlanadi." },
-      { title: null, text: "Yomg'ir va suvning kirib kelishidan samarali himoya qilish uchun pergola karkasida maxsus teshiklar mavjud. IMZO pergolasining zamonaviy va ergonomik dizayni har qanday binoga mos keladi va ajoyib landshaftlarni yaratishga imkoniyat beradi." },
+      { title: null, text: "INOVA avtomatik tomi suriladigan pergolalarni taklif qiladi. Pergolaning tayanch konstruksiyasi yuqori sifatli alyuminiy profildan qilingan. Pergola tomi alyuminiy qovurg'ali PVX profillaridan iborat bo'lib, ular maxsus relslar bo'ylab ovozsiz harakatlanadi." },
+      { title: null, text: "Yomg'ir va suvning kirib kelishidan samarali himoya qilish uchun pergola karkasida maxsus teshiklar mavjud. INOVA pergolasining zamonaviy va ergonomik dizayni har qanday binoga mos keladi va ajoyib landshaftlarni yaratishga imkoniyat beradi." },
       { title: null, text: "Pergolalar ochiq maydonni zonalashtirishning eng samarali va qulay usullaridan biridir. Pergoladan foydalanib, siz ochiq joyda dam olish zonasini yaratishingiz mumkin. Pergola bilan siz o'zingizni quyosh nuri va yomg'irdan himoya qilishingiz mumkin." },
     ],
   },
@@ -789,7 +655,7 @@ export const PRODUCTS: Product[] = [
     profile: "Fasad tizimi",
     badge: "Biznes",
     description:
-      "IMZO kompaniyasining BKF 48 fasad tizimlari ishonchlilik va energiya samaradorligini ta'minlaydigan yuqori sifatli alyuminiy yechimlarni taklif etadi. Tijorat va turar-joy ilovalari uchun ideal bo'lgan ushbu fasadlar…",
+      "INOVA kompaniyasining BKF 48 fasad tizimlari ishonchlilik va energiya samaradorligini ta'minlaydigan yuqori sifatli alyuminiy yechimlarni taklif etadi. Tijorat va turar-joy ilovalari uchun ideal bo'lgan ushbu fasadlar…",
     features: [
       "Profil devori 1,5-2-3 mm",
       "Steklopaket 20-38 mm",
@@ -936,7 +802,7 @@ export const PRODUCTS: Product[] = [
     highlights: [
       { title: null, text: "BKGF 90 tizimi oynali to‘siqlarni yig'ish uchun mo'ljallangan bo‘lib, mustahkamlangan tayanch profilga ega." },
       { title: null, text: "Oyna alyuminiy xanjar shaklidagi profil yordamida mahkamlanadi, u murvatli ulanish yordamida ochiladi. Siqish mexanizmlarini yashiradigan dekorativ shtapik esa konstruksiyaning ishchi qismlarini rezina qistirmalari yordamida muhrlaydi." },
-      { title: null, text: "IMZO dan BKGF 90 shisha panjaralari teraslar, balkonlar va interyerlar uchun oqlangan va xavfsiz echimlarni taklif etadi. Ushbu fextavonie yuqori chidamlilik va zamonaviy dizaynni taqdim etadi, sizning makoningiz ko'rinishini yaxshilaydi va ochiq tuyg'u yaratadi." },
+      { title: null, text: "INOVA dan BKGF 90 shisha panjaralari teraslar, balkonlar va interyerlar uchun oqlangan va xavfsiz echimlarni taklif etadi. Ushbu fextavonie yuqori chidamlilik va zamonaviy dizaynni taqdim etadi, sizning makoningiz ko'rinishini yaxshilaydi va ochiq tuyg'u yaratadi." },
     ],
   },
   {
@@ -978,9 +844,9 @@ export const PRODUCTS: Product[] = [
     specs: [],
     highlights: [
       { title: null, text: "Deraza tokchalari deraza tizimining estetik jozibasi va foydalanish qulayligini ta'minlaydi." },
-      { title: null, text: "IMZO deraza tokchalari PVXdan tayyorlangan. Vertikal va 45 ° burchak ostida joylashtirilgan qattiqlashtiruvchi elementlar yordamida konstruskiyaning mustahkamligi ta'minlanadi. IMZO deraza tokchalari deformatsiyalanmaydi va ko'p yillar davomida o‘z shaklini o‘zgarmaydi." },
-      { title: null, text: "PVX'dan tayyorlangan deraza tokchalari interyer uchun amaliy va zamonaviy yechim hisoblanadi. Ular namlikka va harorat o'zgarishiga chidamli, oson va tez tozalanadi. PVX uzoq xizmat muddatini ta'minlaydi va bo'yashni talab qilmaydi. PVX deraza tokchalari oson o‘rnatiladi. Ranglar, tekstura va dizaynining keng tanlovi mavjud. IMZO deraza tokchalari sizning uyingizda zamonaviy va funksional makon yaratish uchun amaliy yechimdir." },
-      { title: null, text: "Deraza tokchalarini dekorlash uchun IMZO yetakchi nemis brendi tomonidan ishlab chiqarilgan 10 turdagi laminatsiya plyonkasini taklif qiladi. Yuqori sifatli laminatsiya deraza tokchasiga ajoyib ko'rinish beradi, uni shikastlanishdan himoya qiladi va uzoq xizmat muddatini ta'minlaydi." },
+      { title: null, text: "INOVA deraza tokchalari PVXdan tayyorlangan. Vertikal va 45 ° burchak ostida joylashtirilgan qattiqlashtiruvchi elementlar yordamida konstruskiyaning mustahkamligi ta'minlanadi. INOVA deraza tokchalari deformatsiyalanmaydi va ko'p yillar davomida o‘z shaklini o‘zgarmaydi." },
+      { title: null, text: "PVX'dan tayyorlangan deraza tokchalari interyer uchun amaliy va zamonaviy yechim hisoblanadi. Ular namlikka va harorat o'zgarishiga chidamli, oson va tez tozalanadi. PVX uzoq xizmat muddatini ta'minlaydi va bo'yashni talab qilmaydi. PVX deraza tokchalari oson o‘rnatiladi. Ranglar, tekstura va dizaynining keng tanlovi mavjud. INOVA deraza tokchalari sizning uyingizda zamonaviy va funksional makon yaratish uchun amaliy yechimdir." },
+      { title: null, text: "Deraza tokchalarini dekorlash uchun INOVA yetakchi nemis brendi tomonidan ishlab chiqarilgan 10 turdagi laminatsiya plyonkasini taklif qiladi. Yuqori sifatli laminatsiya deraza tokchasiga ajoyib ko'rinish beradi, uni shikastlanishdan himoya qiladi va uzoq xizmat muddatini ta'minlaydi." },
     ],
   },
   {
@@ -990,7 +856,7 @@ export const PRODUCTS: Product[] = [
     profile: "Aksessuar",
     badge: "Aksessuar",
     description:
-      "IMZO ishlab chiqarish jarayonida kichik detallarga ham jiddiy e’tibor qaratadi. Shu munosabat bilan biz dunyoning yetakchi brendlari tomonidan ishlab chiqarilgan yuqori sifatli furnituralarni o‘rnatamiz.",
+      "INOVA ishlab chiqarish jarayonida kichik detallarga ham jiddiy e’tibor qaratadi. Shu munosabat bilan biz dunyoning yetakchi brendlari tomonidan ishlab chiqarilgan yuqori sifatli furnituralarni o‘rnatamiz.",
     features: [
       "Rom va eshik uchun",
       "Turli rang va shakllar",
@@ -1001,14 +867,14 @@ export const PRODUCTS: Product[] = [
     specs: [],
     highlights: [
       { title: null, text: "Rom va eshik tizimlarining mustahkamligini va uzoq vaqt davomida ishlashni ta'minlash uchun har bir tafsilot muhim ahamiyatga ega. Yuqori sifatli furnituralar bilan sizning derazalaringiz ko'p yillar davomida xizmat qiladi." },
-      { title: null, text: "IMZO deraza va eshik konstruksiyalarida mashhur brendlardan tutqichlar va ilgaklar o‘rnatilgan." },
+      { title: null, text: "INOVA deraza va eshik konstruksiyalarida mashhur brendlardan tutqichlar va ilgaklar o‘rnatilgan." },
       { title: null, text: "Rom va eshik tutqichlarining barcha modellari barcha sifat sertifikatlariga ega va laboratoriya sharoitida bir nechta sinovlardan o'tgan." },
     ],
   },
 ];
 
 // Bosh sahifada ko'rsatiladigan 3 ta tanlangan mahsulot (har xil segmentdan).
-export const FEATURED_SLUGS = ["trio-60", "engelberg-70", "thermo-65-engelberg"];
+export const FEATURED_SLUGS = ["trio-60", "engelberg-70", "aldoks"];
 
 export const STATS = [
   { value: "14+", label: "Yil tajriba" },

@@ -9,9 +9,9 @@ import SubpageHeader from "@/src/app/components/SubpageHeader";
 import { TelegramIcon } from "@/src/app/components/icons";
 
 export const metadata: Metadata = {
-  title: "Mahsulot katalogi — IMZO Rom va Eshik Tizimlari | INOVA",
+  title: "Mahsulot katalogi — INOVA Rom va Eshik Tizimlari",
   description:
-    "IMZO zavodining to'liq katalogi: plastik va alyumin romlar, eshiklar, surilma va fasad tizimlari, import yechimlar va aksessuarlar. O'lchov va konsultatsiya bepul.",
+    "INOVA to'liq katalogi: plastik va alyumin romlar, eshiklar, surilma va fasad tizimlari, import yechimlar va aksessuarlar. O'lchov va konsultatsiya bepul.",
 };
 
 export default function ProductsPage() {
@@ -48,7 +48,7 @@ export default function ProductsPage() {
             className="mt-4 max-w-2xl mx-auto"
             style={{ color: "rgba(255,255,255,0.8)", fontSize: 16.5, lineHeight: 1.8 }}
           >
-            IMZO zavodining to'liq assortimenti — {PRODUCTS.length} ta mahsulot: plastik va
+            INOVA to'liq assortimenti — {PRODUCTS.length} ta mahsulot: plastik va
             alyumin romlar, eshiklar, surilma va fasad tizimlari, import yechimlar va
             aksessuarlar.
           </p>

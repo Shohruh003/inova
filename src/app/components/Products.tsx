@@ -31,7 +31,7 @@ export default function Products() {
               fontSize: "clamp(1.6rem, 4vw, 2.5rem)",
             }}
           >
-            IMZO Rom va Eshik Tizimlari
+            INOVA Rom va Eshik Tizimlari
           </h2>
           <p
             className="mt-3 max-w-xl mx-auto"

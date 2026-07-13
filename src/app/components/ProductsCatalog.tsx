@@ -18,7 +18,13 @@ export default function ProductsCatalog() {
         className="flex gap-2 mb-10 overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap sm:justify-center"
         style={{ scrollbarWidth: "none" }}
       >
-        {[{ id: "all", label: "Barchasi" }, ...PRODUCT_CATEGORIES].map((c) => {
+        {[
+          { id: "all", label: "Barchasi" },
+          // Bo'sh (0 mahsulotli) kategoriyalarni ko'rsatmaymiz
+          ...PRODUCT_CATEGORIES.filter((c) =>
+            PRODUCTS.some((p) => p.category === c.id)
+          ),
+        ].map((c) => {
           const active = category === c.id;
           const count =
             c.id === "all"
