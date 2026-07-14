@@ -1,5 +1,7 @@
 export const SITE = {
   brand: "INOVA",
+  // Sayt manzili. Domen olgach, Vercel'da NEXT_PUBLIC_SITE_URL ni o'rnating (masalan https://inovaakfa.uz)
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://inova-two.vercel.app",
   phone: "+998911151133",
   phoneDisplay: "+998 91 115 11 33",
   phoneShort: "91-115-11-33",
