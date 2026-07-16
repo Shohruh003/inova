@@ -77,9 +77,9 @@ export default function Hero() {
             className="mb-8 sm:mb-10"
             style={{
               color: "#cbd5e1",
-              fontSize: "clamp(1rem, 2vw, 1.2rem)",
+              fontSize: "clamp(1.15rem, 2.5vw, 1.45rem)",
               lineHeight: 1.7,
-              maxWidth: 580,
+              maxWidth: 620,
             }}
           >
             INOVA kompaniyasi tomonidan PVC va alyumin profillardan tayyorlangan eshik va romlar —

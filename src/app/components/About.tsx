@@ -2,7 +2,7 @@ import { CheckCircle } from "lucide-react";
 import { IMAGES, SITE } from "@/src/lib/data";
 
 const POINTS = [
-  "Faqat sertifikatlangan PVC profillar",
+  "Faqat sertifikatlangan mahsulotlar",
   "14 yillik ishonchli tajriba",
   "Har bir buyurtmaga individual yondashuv",
   "Raqobatbardosh narxlar va sifat kafolati",
