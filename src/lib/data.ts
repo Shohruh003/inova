@@ -876,7 +876,7 @@ export const PRODUCTS: Product[] = [
 ];
 
 // Bosh sahifada ko'rsatiladigan 3 ta tanlangan mahsulot (har xil segmentdan).
-export const FEATURED_SLUGS = ["trio-60", "engelberg-70", "aldoks"];
+export const FEATURED_SLUGS = ["trio-60", "engelberg-70", "thermo-78-engelberg", "thermo-105-engelberg"];
 
 export const STATS = [
   { value: "14+", label: "Yil tajriba" },
