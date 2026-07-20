@@ -284,7 +284,7 @@ export const PRODUCTS: Product[] = [
     slug: "aldoks",
     name: "Aldoks",
     category: "alyuminievye-okna",
-    profile: "Alyumin profil",
+    profile: "ALYUMIN profil",
     badge: "Yangi",
     description:
       "Aldoks — noyob me'moriy ko'rinish yaratish imkonini beruvchi alyumin rom va eshik tizimi. Mustahkam va nafis dizayn, egri, qavariq yoki siniq shakllarni amalga oshirishga imkon beruvchi moslashuvchan tizim.",
@@ -318,7 +318,7 @@ export const PRODUCTS: Product[] = [
     slug: "champion",
     name: "Champion",
     category: "alyuminievye-okna",
-    profile: "Alyumin profil",
+    profile: "ALYUMIN profil",
     badge: "Hamyonbop",
     description:
       "INOVA Champion alyuminiy tizimidan tayyorlangan konstruktsiyalar asosan balkonlar va lodjiyalarni sovuq oynalashda hamda issiqlik izolyatsiyasi bo‘yicha talablari yuqori bo'lmagan binolarda ishlatiladi.",
@@ -352,7 +352,7 @@ export const PRODUCTS: Product[] = [
     slug: "thermo-57-engelberg",
     name: "Thermo 57 Engelberg",
     category: "alyuminievye-okna",
-    profile: "Alyumin profil",
+    profile: "ALYUMIN profil",
     badge: "Universal",
     description:
       "Ushbu rom va eshik tizimi funksionallik, estetika va foydalanishning universalligi hamda turli xil me'moriy yechimlar va hamyonbop narxni o‘zida mujassamlashtiradi. Yengil va mustahkam Thermo 57 rom va eshik tizimi…",
@@ -382,10 +382,44 @@ export const PRODUCTS: Product[] = [
     ],
   },
   {
+    slug: "thermo-70-engelberg",
+    name: "Thermo 70 Engelberg",
+    category: "alyuminievye-okna",
+    profile: "ALYUMIN profil",
+    badge: "Premium",
+    description:
+      "Thermo 70 (BKT-70) — O'zbekistonning barcha iqlim zonalari uchun issiqlik-texnik standartlarga javob beradigan issiq alyumin profil tizimi. 70 mm o'rnatish chuqurligi va 24 mm poliamid termoko'prik issiqlikni ishonchli saqlaydi, uch qatlamli EPDM zichlash konturi esa shovqin va namlikdan himoya qiladi…",
+    features: [
+      "O'rnatish chuqurligi 70 mm",
+      "Termo ko‘prik 24 mm",
+      "3 kamerali profil",
+      "Steklopaket 20-32 mm",
+    ],
+    img: "/products/thermo-70-engelberg/card.jpg",
+    banner: "/products/thermo-70-engelberg/banner.jpg",
+    specImg: "/products/thermo-70-engelberg/spec.png",
+    specs: [
+      { label: "Profil turi", value: "Alyumin" },
+      { label: "Profil seriyasi", value: "Issiq" },
+      { label: "O‘rnatish chuqurligi", value: "70 mm" },
+      { label: "Profil kesimi kengligi", value: "52 mm" },
+      { label: "Termo ko‘prik (poliamid)", value: "24 mm" },
+      { label: "Kameralar soni", value: "3 kamerali" },
+      { label: "Steklopaket qalinligi", value: "20-32 mm" },
+      { label: "Tavaqaning maksimal o‘lchami", value: "3000 × 1000 mm" },
+      { label: "Qoplama", value: "Anodlash, RAL ranglari, Aluwood laminatsiya" },
+    ],
+    highlights: [
+      { title: null, text: "Thermo 70 — issiq alyumin profil tizimi bo‘lib, 70 mm o‘rnatish chuqurligi va 24 mm poliamid termoko‘prigi issiqlikni ishonchli saqlaydi. Turar-joy va tijorat binolari uchun mos keladi." },
+      { title: "Ishonchli himoya", text: "Uchta EPDM zichlash konturi shovqin, chang va namlikdan himoya qiladi. Argon bilan to‘ldirilgan energiya tejovchi steklopaketlar va zamonaviy import furnituralar uzoq muddatli qulaylikni ta'minlaydi." },
+      { title: "Zamonaviy dizayn", text: "Profil 450 dan ortiq RAL rangda kukunli bo‘yaladi, anodlanadi yoki 'Aluwood' yog‘och naqshi ostida laminatsiya qilinadi — har qanday interyerga mos keladi. Alyumin konstruksiyaning xizmat muddati 80 yildan oshadi." },
+    ],
+  },
+  {
     slug: "thermo-78-engelberg",
     name: "Thermo 78 Engelberg",
     category: "alyuminievye-okna",
-    profile: "Alyumin profil",
+    profile: "ALYUMIN profil",
     badge: "Premium",
     description:
       "Thermo 78 - xonadonlar va uchastkalar uchun eng zamonaviy taklif. Thermo 78 modeli atrof-muhit ta'siriga va har qanday ob-havo sharoitlariga bardosh bera oladi. INOVA'dan Thermo 78 Engelberg derazalari yuqori issiqlik…",
@@ -417,7 +451,7 @@ export const PRODUCTS: Product[] = [
     slug: "thermo-98-engelberg",
     name: "Thermo 98 Engelberg",
     category: "alyuminievye-okna",
-    profile: "Alyumin profil",
+    profile: "ALYUMIN profil",
     badge: "Premium",
     description:
       "THERMO 98 tizimining eng yuqori issiqlik ko'rsatkichlari quyidagilar tufayli ta'minlanadi: - kattalashtirilgan ko'p kamerali termoko'priklaridan foydalanish; - termo ko'prigi zonasida ko'pikli polietilen…",
@@ -446,7 +480,7 @@ export const PRODUCTS: Product[] = [
     slug: "thermo-105-engelberg",
     name: "Thermo 105 Engelberg",
     category: "alyuminievye-okna",
-    profile: "Alyumin profil",
+    profile: "ALYUMIN profil",
     badge: "Premium",
     description:
       "EN 12600, EN 14019 va EN 13049 standartlariga javob beradi. Ushbu sinovlarni o‘tkazish uchun massasi 50 kg bo'lgan mayatnik ishlatiladi.",
@@ -876,7 +910,7 @@ export const PRODUCTS: Product[] = [
 ];
 
 // Bosh sahifada ko'rsatiladigan 3 ta tanlangan mahsulot (har xil segmentdan).
-export const FEATURED_SLUGS = ["trio-60", "engelberg-70", "thermo-78-engelberg", "thermo-105-engelberg"];
+export const FEATURED_SLUGS = ["trio-60", "engelberg-70", "thermo-70-engelberg", "thermo-78-engelberg", "thermo-105-engelberg"];
 
 export const STATS = [
   { value: "14+", label: "Yil tajriba" },
