@@ -82,9 +82,9 @@ export default function Hero() {
               maxWidth: 620,
             }}
           >
-            INOVA kompaniyasi tomonidan PVC va ALYUMIN profillardan tayyorlangan eshik va romlar —
-            Chimyon shaharchasidan O'zbekiston bo'ylab. O'lchov, yetkazib berish, o'rnatish va
-            konsultatsiya xizmatlari mavjud.
+            INOVA kompaniyasi tomonidan <br className="sm:hidden" />PVC va ALYUMIN profillardan
+            tayyorlangan eshik va romlar — Chimyon shaharchasidan O'zbekiston bo'ylab. O'lchov,
+            yetkazib berish, o'rnatish va konsultatsiya xizmatlari mavjud.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
