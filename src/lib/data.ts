@@ -217,7 +217,7 @@ export const PRODUCTS: Product[] = [
     name: "Engelberg 7000",
     category: "plastikovye-okna",
     profile: "PVC profil",
-    badge: "Ommabop",
+    badge: "Premium",
     description:
       "Engelberg 7000 profilidan tayyorlangan romlar Shveytsariya texnologiyasidan foydalangan holda ishlab chiqariladi va Yevropa sifat standartlariga javob beradi.",
     features: [
