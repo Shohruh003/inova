@@ -148,12 +148,12 @@ export const PRODUCTS: Product[] = [
   },
   {
     slug: "trio-60",
-    name: "Trio 60",
+    name: "Trio 6000",
     category: "plastikovye-okna",
     profile: "PVC profil",
     badge: "Hamyonbop",
     description:
-      "TRIO 60 tizimi - ixcham profildan ishlab chiqarilgan va yuqori yorug'lik o'tkazuvchanligiga ega konstruksiyalar. INOVA dan Trio 60 oynalari zamonaviy dizayn, ishonchlilik va energiya samaradorligini o'zida mujassam etgan…",
+      "TRIO 6000 tizimi - ixcham profildan ishlab chiqarilgan va yuqori yorug'lik o'tkazuvchanligiga ega konstruksiyalar. INOVA dan Trio 6000 oynalari zamonaviy dizayn, ishonchlilik va energiya samaradorligini o'zida mujassam etgan…",
     features: [
       "3 kamerali profil",
       "Profil devori 2,8 mm",
@@ -174,10 +174,10 @@ export const PRODUCTS: Product[] = [
       { label: "Montaj chuqurligi", value: "60 mm" },
     ],
     highlights: [
-      { title: null, text: "TRIO 60 PVX tizimlari Markaziy Osiyo iqlimi sharoitlarini hisobga olgan holda yaratilgan.Trio 60 haqiqatan ham O‘zbekistonda eng mashhur rom modellaridan biri hisoblanadi. Trio 60’ning mashhurligi uning mukammal sifati, ajoyib texnik xususiyatlari va hamyonbop narxi bilan bog‘liq.TRIO romlari boshqa PVX romlariga qaraganda ancha bardoshli va energiya tejamkor hisoblanadi. TRIO uyingizda shinam muhit yaratadi." },
-      { title: null, text: "INOVA Trio 60 romlari Markaziy Osiyoning o‘zgaruvchan iqlimdan qo‘rqmaydi! Biz barcha standartlarga rioya qilib, mustahkamlik va germetiklikka alohida e'tibor qaratdik. Ushbu seriyadagi profillar an'anaviy plastik derazalarga qaraganda ko'proq issiqlikni saqlaydi va uzoq vaqt davomida xizmat qiladi. TRIO 60 bizning shourumlarimizdagi eng mashhur modellardan biri hisoblanadi. Agar siz ishonchlilik, soddalik va qulaylikni yaxshi ko'rsangiz, INOVA Trio seriyasini tanlang." },
-      { title: null, text: "INOVA TRIO 6000 seriyasi ajoyib tashqi ko‘rinishga ega bo‘lib, issiqlikni saqlash va ko'cha shovqinidan himoya qilish bo'yicha mukammal ko'rsatkichlarga ega.Ushbu profil seriyasining asosiy afzalliklari - 2,8 mm li devor qalinligi hamda qo'shimcha rezinali zichlagichni o'rnatish imkoniyatidir. Trio 60 energiya yo'qotishlarini kamaytirishga va pulni tejashga yordam beradi. Ushbu romlar sizning uyingizni yelvizak, sovuq, namlik va quyoshdan ishonchli himoyalaydi." },
-      { title: null, text: "Biz zamonaviy muhandislik ishlanmalari bilan birgalikda yillar davomida tasdiqlangan yechimlardan foydalandik - Trio 60'da mustahkamlangan profil, argon bilan to'ldirilgan energiya tejovchi steklopaketlar mavjud. TRIO 60 tizimi klassik dizayn va ajoyib samaradorlik parametrlarining uyg‘unligidir. Trio 60 bilan sizning uyingiz haqiqatan ham himoyalangan bo‘ladi." },
+      { title: null, text: "TRIO 6000 PVX tizimlari Markaziy Osiyo iqlimi sharoitlarini hisobga olgan holda yaratilgan.Trio 6000 haqiqatan ham O‘zbekistonda eng mashhur rom modellaridan biri hisoblanadi. Trio 6000’ning mashhurligi uning mukammal sifati, ajoyib texnik xususiyatlari va hamyonbop narxi bilan bog‘liq.TRIO romlari boshqa PVX romlariga qaraganda ancha bardoshli va energiya tejamkor hisoblanadi. TRIO uyingizda shinam muhit yaratadi." },
+      { title: null, text: "INOVA Trio 6000 romlari Markaziy Osiyoning o‘zgaruvchan iqlimdan qo‘rqmaydi! Biz barcha standartlarga rioya qilib, mustahkamlik va germetiklikka alohida e'tibor qaratdik. Ushbu seriyadagi profillar an'anaviy plastik derazalarga qaraganda ko'proq issiqlikni saqlaydi va uzoq vaqt davomida xizmat qiladi. TRIO 6000 bizning shourumlarimizdagi eng mashhur modellardan biri hisoblanadi. Agar siz ishonchlilik, soddalik va qulaylikni yaxshi ko'rsangiz, INOVA Trio seriyasini tanlang." },
+      { title: null, text: "INOVA TRIO 600000 seriyasi ajoyib tashqi ko‘rinishga ega bo‘lib, issiqlikni saqlash va ko'cha shovqinidan himoya qilish bo'yicha mukammal ko'rsatkichlarga ega.Ushbu profil seriyasining asosiy afzalliklari - 2,8 mm li devor qalinligi hamda qo'shimcha rezinali zichlagichni o'rnatish imkoniyatidir. Trio 6000 energiya yo'qotishlarini kamaytirishga va pulni tejashga yordam beradi. Ushbu romlar sizning uyingizni yelvizak, sovuq, namlik va quyoshdan ishonchli himoyalaydi." },
+      { title: null, text: "Biz zamonaviy muhandislik ishlanmalari bilan birgalikda yillar davomida tasdiqlangan yechimlardan foydalandik - Trio 6000'da mustahkamlangan profil, argon bilan to'ldirilgan energiya tejovchi steklopaketlar mavjud. TRIO 6000 tizimi klassik dizayn va ajoyib samaradorlik parametrlarining uyg‘unligidir. Trio 6000 bilan sizning uyingiz haqiqatan ham himoyalangan bo‘ladi." },
     ],
   },
   {
@@ -214,12 +214,12 @@ export const PRODUCTS: Product[] = [
   },
   {
     slug: "engelberg-70",
-    name: "Engelberg 70",
+    name: "Engelberg 7000",
     category: "plastikovye-okna",
     profile: "PVC profil",
     badge: "Ommabop",
     description:
-      "Engelberg 70 profilidan tayyorlangan romlar Shveytsariya texnologiyasidan foydalangan holda ishlab chiqariladi va Yevropa sifat standartlariga javob beradi.",
+      "Engelberg 7000 profilidan tayyorlangan romlar Shveytsariya texnologiyasidan foydalangan holda ishlab chiqariladi va Yevropa sifat standartlariga javob beradi.",
     features: [
       "5 kamerali profil",
       "Profil devori 2,8 mm",
@@ -240,19 +240,19 @@ export const PRODUCTS: Product[] = [
     ],
     highlights: [
       { title: null, text: "Ushbu rom tizimi yotoqxonangiz va zalingiz uchun juda mos keladi. Ushbu rom ortiqcha shovqindan himoya qiladi va xonada qulay haroratni saqlashga yordam beradi." },
-      { title: null, text: "Beshta kamera va po'latli kuchaytirgich rom shaklini ushlab turadi, deformatsiyadan himoya qiladi, issiqlikni saqlaydi va ko'chadagi shovqinni o‘tkazmaydi. Engelberg 70 profil seriyasi zal, kabinet va yotoqxona uchun ajoyib yechim." },
-      { title: "Maksimal qulaylikni tanlaganlar uchun", text: "Engelberg 70 profili Markaziy Osiyo iqlimiga va intensiv foydalanishga moslashtirilgan. Yuqori harorat o'zgarishiga, quyosh nuriga uzoq vaqt ta'sir qilishiga va og'ir yuklarga bardosh bera oladi. Germetik konstruksiya issiqlik yo'qotilishidan himoya qiladi hamda ovoz va namlik izolatsiyasini ta'minlaydi. Maxsus steklopaket esa yorug'lik o‘tkazuvchanlik xususiyatlariga ega." },
+      { title: null, text: "Beshta kamera va po'latli kuchaytirgich rom shaklini ushlab turadi, deformatsiyadan himoya qiladi, issiqlikni saqlaydi va ko'chadagi shovqinni o‘tkazmaydi. Engelberg 7000 profil seriyasi zal, kabinet va yotoqxona uchun ajoyib yechim." },
+      { title: "Maksimal qulaylikni tanlaganlar uchun", text: "Engelberg 7000 profili Markaziy Osiyo iqlimiga va intensiv foydalanishga moslashtirilgan. Yuqori harorat o'zgarishiga, quyosh nuriga uzoq vaqt ta'sir qilishiga va og'ir yuklarga bardosh bera oladi. Germetik konstruksiya issiqlik yo'qotilishidan himoya qiladi hamda ovoz va namlik izolatsiyasini ta'minlaydi. Maxsus steklopaket esa yorug'lik o‘tkazuvchanlik xususiyatlariga ega." },
       { title: null, text: "60 000 tagacha ochilish tsikllari" },
     ],
   },
   {
     slug: "engelberg-80",
-    name: "Engelberg 80",
+    name: "Engelberg 8000",
     category: "plastikovye-okna",
     profile: "PVC profil",
     badge: "Premium",
     description:
-      "Engelberg 80 - estetik dizayn va energiya samaradorligini maqbul narxda birlashtirgan yuqori izolyatsion ko‘satkichlariga ega rom va eshik tizimi.",
+      "Engelberg 8000 - estetik dizayn va energiya samaradorligini maqbul narxda birlashtirgan yuqori izolyatsion ko‘satkichlariga ega rom va eshik tizimi.",
     features: [
       "6 kamerali profil",
       "Profil devori 2,8 mm",
