@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     template: "%s | INOVA",
   },
   description:
-    "Farg'ona tumani, Chimyon shaharchasi. 14 yillik tajriba. PVC va alyumin profillardan eshik va romlar. O'lchov, yetkazib berish va o'rnatish xizmatlari. 5 yil kafolat.",
+    "Farg'ona tumani, Chimyon qishlog'i. 14 yillik tajriba. PVC va alyumin profillardan eshik va romlar. O'lchov, yetkazib berish va o'rnatish xizmatlari. 5 yil kafolat.",
   keywords: [
     "plastik romlar",
     "PVC rom",
@@ -65,7 +65,7 @@ const jsonLd = {
   image: `${SITE.url}/logo.png`,
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Chimyon shaharchasi",
+    streetAddress: "Chimyon qishlog'i",
     addressLocality: "Farg'ona tumani",
     addressRegion: "Farg'ona viloyati",
     addressCountry: "UZ",

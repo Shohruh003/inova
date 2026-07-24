@@ -44,10 +44,10 @@ export default function About() {
                 lineHeight: 1.3,
               }}
             >
-              Farg'ona tuman Chimyon shaharchasidan istalgan manzilga
+              Farg'ona tuman Chimyon qishlog'idan istalgan manzilga
             </h2>
             <p className="mt-4" style={{ color: "#cbd5e1", lineHeight: 1.8, fontSize: 16 }}>
-              {SITE.experienceYears} yildan beri Farg'ona tumani Chimyon shaharchasida faoliyat
+              {SITE.experienceYears} yildan beri Farg'ona tumani Chimyon qishlog'ida faoliyat
               yuritayotgan INOVA kompaniyasi PVC eshik va romlar sohasida ishonchli nom qozondi.
               Bizda O'zbekiston bo'yicha barcha mahsulot turlari mavjud.
             </p>

@@ -8,7 +8,7 @@ export const SITE = {
   telegram: "inova_akfa",
   instagram: "inova.akfa",
   mapUrl: "https://yandex.ru/maps/-/CPvWMW3V",
-  address: "Farg'ona tumani, Chimyon shaharchasi",
+  address: "Farg'ona tumani, Chimyon qishlog'i",
   hours: "Dushanba – Shanba, 09:00 – 18:00",
   experienceYears: 14,
   warrantyYears: 5,
@@ -85,7 +85,7 @@ export const PRODUCTS: Product[] = [
     name: "Akfa 7000",
     category: "plastikovye-okna",
     profile: "PVC profil",
-    badge: "Premium",
+    badge: "Hamyonbop",
     description:
       "Akfa 7000 — maksimal qulaylik va kafolatlangan komfort uchun energiya tejovchi PVC profil seriyasi. Besh kamerali profil va po'lat kuchaytirgich shaklini ishonchli saqlaydi, deformatsiyalanmaydi, issiqlikni ushlab turadi va ko'cha shovqinidan himoya qiladi.",
     features: [
@@ -119,7 +119,7 @@ export const PRODUCTS: Product[] = [
     name: "Penta 6500",
     category: "plastikovye-okna",
     profile: "PVC profil",
-    badge: "Yangi",
+    badge: "Hamyonbop",
     description:
       "Penta 6500 — Markaziy Osiyoning keskin kontinental iqlimi uchun ishlab chiqilgan yangi avlod besh kamerali PVC profil. Xonani harorat o'zgarishlari va shovqindan ishonchli himoya qiladi, kengaytirilgan yorug'lik ochilishi tabiiy nurni ko'proq o'tkazadi.",
     features: [
@@ -910,7 +910,7 @@ export const PRODUCTS: Product[] = [
 ];
 
 // Bosh sahifada ko'rsatiladigan 3 ta tanlangan mahsulot (har xil segmentdan).
-export const FEATURED_SLUGS = ["trio-60", "engelberg-70", "thermo-70-engelberg", "thermo-78-engelberg", "thermo-105-engelberg"];
+export const FEATURED_SLUGS = ["trio-60", "engelberg-70", "thermo-70-engelberg", "thermo-78-engelberg"];
 
 export const STATS = [
   { value: "14+", label: "Yil tajriba" },

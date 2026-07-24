@@ -21,14 +21,14 @@ export default function ProductCard({ product: p }: { product: Product }) {
       <Link
         href={`/products/${p.slug}`}
         className="relative overflow-hidden block"
-        style={{ height: 260, background: "#0f172a" }}
+        style={{ height: 260, background: "linear-gradient(180deg, #f8fafc, #e9eef3)" }}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={p.img}
           alt={p.name}
           loading="lazy"
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
         />
         <div
           className="absolute inset-0"

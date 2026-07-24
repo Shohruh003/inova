@@ -2,13 +2,15 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { Menu, MapPin, Phone, X } from "lucide-react";
+import { Menu, MapPin, Phone, Ruler, X } from "lucide-react";
 import { NAV_LINKS, SITE } from "@/src/lib/data";
 import logo from "@/public/logo.png";
 import { InstagramIcon, TelegramIcon } from "./icons";
+import MeasureModal from "./MeasureModal";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [measureOpen, setMeasureOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -53,7 +55,33 @@ export default function Navbar() {
         }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 md:h-20">
+          {/* Mobile top bar: qo'ng'iroq + Bepul o'lchash (imzo kabi eng tepada) */}
+          <div className="flex md:hidden items-center justify-between pt-3 pb-2 relative z-[60]">
+            <a
+              href={`tel:${SITE.phone}`}
+              className="flex items-center justify-center w-10 h-10 rounded-full flex-shrink-0 shadow-md active:scale-95 transition-transform"
+              style={{ background: "linear-gradient(135deg, #013B41, #0F766E)", color: "#fff" }}
+              aria-label="Qo'ng'iroq qilish"
+            >
+              <Phone size={18} />
+            </a>
+            <button
+              onClick={() => setMeasureOpen(true)}
+              className="flex items-center gap-2 px-5 h-10 rounded-full shadow-md active:scale-95 transition-transform"
+              style={{
+                background: "linear-gradient(135deg, #013B41, #0F766E)",
+                color: "#fff",
+                fontWeight: 700,
+                fontSize: 14,
+              }}
+              aria-label="Bepul o'lchash"
+            >
+              <Ruler size={16} />
+              Bepul o'lchash
+            </button>
+          </div>
+
+          <div className="flex items-center justify-between h-14 md:h-20">
             {/* Logo */}
             <button
               onClick={() => scrollTo("#home")}
@@ -101,8 +129,23 @@ export default function Navbar() {
               ))}
             </div>
 
-            {/* CTA Button */}
+            {/* CTA Button (Desktop) */}
             <div className="hidden md:flex items-center gap-3">
+              <button
+                onClick={() => setMeasureOpen(true)}
+                className="flex items-center gap-2 px-5 py-2.5 rounded-xl transition-all duration-200 hover:scale-105 hover:shadow-md cursor-pointer"
+                style={{
+                  background: hasBg ? "#F0FDFA" : "rgba(255,255,255,0.15)",
+                  border: hasBg ? "1.5px solid #CCFBF1" : "1.5px solid rgba(255,255,255,0.5)",
+                  color: hasBg ? "#0F766E" : "#fff",
+                  fontWeight: 600,
+                  fontSize: 15,
+                  backdropFilter: hasBg ? "none" : "blur(8px)",
+                }}
+              >
+                <Ruler size={16} />
+                Bepul o'lchash
+              </button>
               <a
                 href={`tel:${SITE.phone}`}
                 className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-white transition-all duration-200 hover:scale-105 hover:shadow-lg"
@@ -117,9 +160,9 @@ export default function Navbar() {
               </a>
             </div>
 
-            {/* Mobile Menu Button */}
+            {/* Mobile menyu tugmasi */}
             <button
-              className="md:hidden p-2 rounded-lg relative z-[60]"
+              className="md:hidden p-1.5 rounded-lg relative z-[60]"
               style={{ color: hasBg || menuOpen ? "#012F33" : "#fff" }}
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label="Menyu"
@@ -142,7 +185,7 @@ export default function Navbar() {
         aria-hidden={!menuOpen}
       >
         <div
-          className={`flex flex-col h-full pt-24 pb-8 px-6 transition-transform duration-300 ${
+          className={`flex flex-col h-full pt-28 pb-8 px-6 transition-transform duration-300 ${
             menuOpen ? "translate-y-0" : "-translate-y-4"
           }`}
         >
@@ -242,6 +285,9 @@ export default function Navbar() {
           </div>
         </div>
       </div>
+
+      {/* Bepul o'lchash formasi (modal) */}
+      <MeasureModal open={measureOpen} onClose={() => setMeasureOpen(false)} />
     </>
   );
 }

@@ -7,6 +7,8 @@ import Footer from "@/src/app/components/Footer";
 import FloatingButtons from "@/src/app/components/FloatingButtons";
 import ProductCard, { BADGE_COLORS } from "@/src/app/components/ProductCard";
 import SubpageHeader from "@/src/app/components/SubpageHeader";
+import ProductColors from "@/src/app/components/ProductColors";
+import { getProductColors } from "@/src/lib/productColors";
 import { TelegramIcon } from "@/src/app/components/icons";
 
 export function generateStaticParams() {
@@ -164,7 +166,7 @@ export default async function ProductPage({
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={product.img}
+                src={product.banner || product.img}
                 alt={product.name}
                 className="w-full object-cover"
                 style={{ maxHeight: 480, objectPosition: "center" }}
@@ -173,6 +175,11 @@ export default async function ProductPage({
           </div>
         </div>
       </section>
+
+      {/* Ranglar (rang tanlash) — imzo.uz'dan olingan real rasmlar */}
+      {getProductColors(product.slug) && (
+        <ProductColors name={product.name} colors={getProductColors(product.slug)!} />
+      )}
 
       {/* Texnik xususiyatlar */}
       {product.specs.length > 0 && (
@@ -272,21 +279,6 @@ export default async function ProductPage({
                 </div>
               ))}
             </div>
-
-            {product.banner && (
-              <div
-                className="mt-12 rounded-3xl overflow-hidden max-w-5xl mx-auto"
-                style={{ boxShadow: "0 4px 32px rgba(0,0,0,0.1)" }}
-              >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={product.banner}
-                  alt={`${product.name} — namuna`}
-                  className="w-full object-cover"
-                  loading="lazy"
-                />
-              </div>
-            )}
           </div>
         </section>
       )}
