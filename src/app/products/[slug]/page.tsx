@@ -72,7 +72,7 @@ export default async function ProductPage({
           </nav>
 
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-            <div>
+            <div className="order-2 lg:order-1">
               <div className="flex items-center gap-2 mb-5 flex-wrap">
                 <span
                   className="px-3 py-1.5 rounded-full text-white"
@@ -161,7 +161,7 @@ export default async function ProductPage({
             </div>
 
             <div
-              className="rounded-3xl overflow-hidden bg-white"
+              className="rounded-3xl overflow-hidden bg-white order-1 lg:order-2"
               style={{ boxShadow: "0 24px 80px rgba(0,0,0,0.35)" }}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}

@@ -6,6 +6,7 @@ import Gallery from "./components/Gallery";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Products from "./components/Products";
+import Reveal from "./components/Reveal";
 import Services from "./components/Services";
 import Steps from "./components/Steps";
 import Terms from "./components/Terms";
@@ -15,13 +16,27 @@ export default function Home() {
     <main className="min-h-screen bg-white">
       <Navbar />
       <Hero />
-      <Products />
-      <About />
-      <Services />
-      <Steps />
-      <Terms />
-      <Gallery />
-      <Contact />
+      <Reveal>
+        <Products />
+      </Reveal>
+      <Reveal>
+        <About />
+      </Reveal>
+      <Reveal>
+        <Services />
+      </Reveal>
+      <Reveal>
+        <Steps />
+      </Reveal>
+      <Reveal>
+        <Terms />
+      </Reveal>
+      <Reveal>
+        <Gallery />
+      </Reveal>
+      <Reveal>
+        <Contact />
+      </Reveal>
       <Footer />
       <FloatingButtons />
     </main>

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { ChevronDown, Phone, Star } from "lucide-react";
 import { IMAGES, SITE, STATS } from "@/src/lib/data";
+import CountUp from "./CountUp";
 import logo from "@/public/logo.png";
 
 export default function Hero() {
@@ -124,22 +125,22 @@ export default function Hero() {
             {STATS.map((s) => (
               <div
                 key={s.label}
-                className="text-center p-4 rounded-2xl"
+                className="text-center p-4 rounded-2xl transition-transform duration-300 hover:-translate-y-1"
                 style={{
                   background: "rgba(255,255,255,0.08)",
                   border: "1px solid rgba(255,255,255,0.15)",
                   backdropFilter: "blur(8px)",
                 }}
               >
-                <div
+                <CountUp
+                  value={s.value}
                   style={{
+                    display: "block",
                     fontSize: "clamp(1.5rem, 3vw, 2rem)",
                     fontWeight: 800,
                     color: "#5EEAD4",
                   }}
-                >
-                  {s.value}
-                </div>
+                />
                 <div style={{ fontSize: 13, color: "#cbd5e1", marginTop: 2 }}>{s.label}</div>
               </div>
             ))}

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { PRODUCTS, PRODUCT_CATEGORIES } from "@/src/lib/data";
 import ProductCard from "./ProductCard";
+import Reveal from "./Reveal";
 
 // To'liq katalog: kategoriya filtri + barcha mahsulot kartalari (/products sahifasida).
 export default function ProductsCatalog() {
@@ -54,8 +55,10 @@ export default function ProductsCatalog() {
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {visible.map((p) => (
-          <ProductCard key={p.slug} product={p} />
+        {visible.map((p, i) => (
+          <Reveal key={p.slug} delay={(i % 6) * 70} y={30}>
+            <ProductCard product={p} />
+          </Reveal>
         ))}
       </div>
     </div>

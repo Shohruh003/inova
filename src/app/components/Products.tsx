@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { PRODUCTS, FEATURED_SLUGS } from "@/src/lib/data";
 import ProductCard from "./ProductCard";
+import Reveal from "./Reveal";
 
 // Bosh sahifa bo'limi: 3 ta tanlangan mahsulot + to'liq katalogga havola.
 export default function Products() {
@@ -44,8 +45,10 @@ export default function Products() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {featured.map((p) => (
-            <ProductCard key={p.slug} product={p} />
+          {featured.map((p, i) => (
+            <Reveal key={p.slug} delay={i * 90} y={30}>
+              <ProductCard product={p} />
+            </Reveal>
           ))}
         </div>
 
