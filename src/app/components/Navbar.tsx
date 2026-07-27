@@ -8,7 +8,10 @@ import logo from "@/public/logo.png";
 import { InstagramIcon, TelegramIcon, YoutubeIcon } from "./icons";
 import MeasureModal from "./MeasureModal";
 import LanguageSwitcher from "./LanguageSwitcher";
-import { useI18n } from "@/src/lib/i18n";
+import { useI18n, LANGS } from "@/src/lib/i18n";
+
+// Mobil menyu uchun to'liq til nomlari
+const LANG_FULL: Record<string, string> = { uz: "O'zbekcha", ru: "Русский", en: "English" };
 
 // Nav havola href -> tarjima kaliti
 const NAV_KEY: Record<string, string> = {
@@ -21,7 +24,7 @@ const NAV_KEY: Record<string, string> = {
 };
 
 export default function Navbar() {
-  const { t } = useI18n();
+  const { t, lang, setLang } = useI18n();
   const [menuOpen, setMenuOpen] = useState(false);
   const [measureOpen, setMeasureOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -203,13 +206,38 @@ export default function Navbar() {
                 </div>
               </button>
             ))}
+
+            {/* Til tanlash — menyu uslubida */}
+            {LANGS.map((l) => {
+              const active = lang === l.code;
+              return (
+                <button
+                  key={l.code}
+                  onClick={() => setLang(l.code)}
+                  className="text-left px-5 py-4 rounded-2xl transition-all duration-200 active:scale-[0.98]"
+                  style={{
+                    background: active ? "#F0FDFA" : "#fff",
+                    border: active ? "1.5px solid #0F766E" : "1.5px solid #e2e8f0",
+                    fontWeight: 600,
+                    fontSize: 17,
+                    color: active ? "#0F766E" : "#012F33",
+                    boxShadow: "0 2px 8px rgba(1,47,51,0.04)",
+                  }}
+                  aria-pressed={active}
+                >
+                  <div className="flex items-center justify-between">
+                    <span>{LANG_FULL[l.code]}</span>
+                    <span style={{ color: "#0F766E", fontSize: 18 }}>
+                      {active ? "✓" : ""}
+                    </span>
+                  </div>
+                </button>
+              );
+            })}
           </div>
 
           {/* Bottom — Contact actions */}
           <div className="flex flex-col gap-3 mt-6">
-            <div className="flex justify-center mb-1">
-              <LanguageSwitcher />
-            </div>
             <a
               href={`tel:${SITE.phone}`}
               className="flex items-center justify-center gap-2 py-4 rounded-2xl text-white shadow-lg active:scale-[0.98] transition-transform"
