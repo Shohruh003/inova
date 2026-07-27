@@ -8,7 +8,7 @@ import { useI18n } from "@/src/lib/i18n";
 export default function FloatingButtons() {
   const { t } = useI18n();
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+    <div className="fixed bottom-6 right-6 z-30 flex flex-col gap-3">
       <a
         href={`https://t.me/${SITE.telegram}`}
         target="_blank"
@@ -22,10 +22,11 @@ export default function FloatingButtons() {
       >
         <TelegramIcon size={24} />
       </a>
+      {/* Telefon tugmasi faqat desktopda (mobilda tepada qo'ng'iroq ikonkasi bor) */}
       <a
         href={`tel:${SITE.phone}`}
         aria-label={t("contact.phone")}
-        className="w-14 h-14 rounded-full flex items-center justify-center text-white shadow-2xl transition-all duration-200 hover:scale-110 pulse-soft"
+        className="w-14 h-14 rounded-full hidden md:flex items-center justify-center text-white shadow-2xl transition-all duration-200 hover:scale-110 pulse-soft"
         style={{ background: "linear-gradient(135deg, #059669, #10b981)" }}
       >
         <Phone size={22} />

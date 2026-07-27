@@ -79,7 +79,6 @@ export default function Navbar() {
               <Phone size={18} />
             </a>
             <div className="flex items-center gap-2">
-              <LanguageSwitcher />
               <button
                 onClick={() => setMeasureOpen(true)}
                 className="flex items-center gap-1.5 px-3.5 h-10 rounded-full shadow-md active:scale-95 transition-transform"
@@ -145,36 +144,9 @@ export default function Navbar() {
               ))}
             </div>
 
-            {/* CTA Button (Desktop) */}
+            {/* Til almashtirgich (Desktop) */}
             <div className="hidden md:flex items-center gap-3">
               <LanguageSwitcher dark={!hasBg} />
-              <button
-                onClick={() => setMeasureOpen(true)}
-                className="flex items-center gap-2 px-5 py-2.5 rounded-xl transition-all duration-200 hover:scale-105 hover:shadow-md cursor-pointer"
-                style={{
-                  background: hasBg ? "#F0FDFA" : "rgba(255,255,255,0.15)",
-                  border: hasBg ? "1.5px solid #CCFBF1" : "1.5px solid rgba(255,255,255,0.5)",
-                  color: hasBg ? "#0F766E" : "#fff",
-                  fontWeight: 600,
-                  fontSize: 15,
-                  backdropFilter: hasBg ? "none" : "blur(8px)",
-                }}
-              >
-                <Ruler size={16} />
-                {t("nav.measure")}
-              </button>
-              <a
-                href={`tel:${SITE.phone}`}
-                className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-white transition-all duration-200 hover:scale-105 hover:shadow-lg"
-                style={{
-                  background: "linear-gradient(135deg, #013B41, #0F766E)",
-                  fontWeight: 600,
-                  fontSize: 15,
-                }}
-              >
-                <Phone size={16} />
-                {SITE.phoneShort}
-              </a>
             </div>
 
             {/* Mobile menyu tugmasi */}
@@ -235,6 +207,9 @@ export default function Navbar() {
 
           {/* Bottom — Contact actions */}
           <div className="flex flex-col gap-3 mt-6">
+            <div className="flex justify-center mb-1">
+              <LanguageSwitcher />
+            </div>
             <a
               href={`tel:${SITE.phone}`}
               className="flex items-center justify-center gap-2 py-4 rounded-2xl text-white shadow-lg active:scale-[0.98] transition-transform"
