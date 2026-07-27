@@ -135,7 +135,7 @@ export default function Hero() {
                 }}
               >
                 <CountUp
-                  value={s.value}
+                  value={s.value.replace("yil", t("unit.year"))}
                   style={{
                     display: "block",
                     fontSize: "clamp(1.5rem, 3vw, 2rem)",

@@ -47,7 +47,7 @@ export default function Footer() {
               </span>
             </div>
             <p style={{ lineHeight: 1.8, fontSize: 14, maxWidth: 320 }}>
-              {SITE.address}. {SITE.experienceYears} {t("footer.desc1")}
+              {t("site.address")}. {SITE.experienceYears} {t("footer.desc1")}
             </p>
             <div className="flex gap-3 mt-5">
               <a
@@ -120,7 +120,7 @@ export default function Footer() {
           <span style={{ fontSize: 13 }}>
             © {new Date().getFullYear()} {SITE.brand}. {t("footer.rights")}
           </span>
-          <span style={{ fontSize: 13 }}>{SITE.address}</span>
+          <span style={{ fontSize: 13 }}>{t("site.address")}</span>
         </div>
       </div>
     </footer>

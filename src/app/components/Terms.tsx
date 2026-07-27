@@ -116,7 +116,7 @@ export default function Terms() {
                       fontWeight: 700,
                     }}
                   >
-                    {d.days}
+                    {d.days.replace("kun", t("unit.day"))}
                   </span>
                 </div>
               ))}

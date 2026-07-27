@@ -154,7 +154,7 @@ export default function Contact() {
                       marginTop: 2,
                     }}
                   >
-                    {c.value}
+                    {c.title === "Manzil" ? t("site.address") : c.value}
                   </div>
                 </div>
                 <div className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity">

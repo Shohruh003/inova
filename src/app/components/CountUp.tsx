@@ -14,8 +14,8 @@ export default function CountUp({
   className?: string;
   style?: React.CSSProperties;
 }) {
-  const m = String(value).match(/^(\d[\d\s]*)(.*)$/);
-  const target = m ? parseInt(m[1].replace(/\s/g, ""), 10) : 0;
+  const m = String(value).match(/^(\d+)(.*)$/);
+  const target = m ? parseInt(m[1], 10) : 0;
   const suffix = m ? m[2] : value;
 
   const ref = useRef<HTMLSpanElement>(null);

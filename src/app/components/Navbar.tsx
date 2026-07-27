@@ -348,7 +348,7 @@ export default function Navbar() {
               className="text-center mt-2"
               style={{ color: "#64748b", fontSize: 13 }}
             >
-              {SITE.address} · {t("contact.hoursDays")}, 09:00 – 18:00
+              {t("site.address")} · {t("contact.hoursDays")}, 09:00 – 18:00
             </div>
           </div>
         </div>

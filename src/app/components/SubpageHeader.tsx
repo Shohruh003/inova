@@ -48,7 +48,9 @@ export default function SubpageHeader({
           </Link>
 
           <div className="flex items-center gap-3">
-            <LanguageSwitcher />
+            <div className="hidden md:block">
+              <LanguageSwitcher />
+            </div>
             <a
               href={`tel:${SITE.phone}`}
               className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-white transition-all duration-200 hover:scale-105 hover:shadow-lg"

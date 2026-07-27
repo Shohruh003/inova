@@ -2,7 +2,25 @@
 
 import { useState } from "react";
 import type { ProductColor } from "@/src/lib/productColors";
-import { useI18n } from "@/src/lib/i18n";
+import { useI18n, type Lang } from "@/src/lib/i18n";
+
+// Rang nomlari tarjimasi (uz manba -> ru/en)
+const COLOR_NAME_I18N: Record<string, Record<Lang, string>> = {
+  "Oq": { uz: "Oq", ru: "Белый", en: "White" },
+  "Oq-alyumin": { uz: "Oq-alyumin", ru: "Бело-алюминиевый", en: "White aluminum" },
+  "Antratsit": { uz: "Antratsit", ru: "Антрацит", en: "Anthracite" },
+  "Antratsit metbrash": { uz: "Antratsit metbrash", ru: "Метбраш антрацит", en: "Metbrush anthracite" },
+  "Temir kulrang": { uz: "Temir kulrang", ru: "Железно-серый", en: "Iron grey" },
+  "Kulrang": { uz: "Kulrang", ru: "Серый", en: "Grey" },
+  "Kulrang eman": { uz: "Kulrang eman", ru: "Серый дуб", en: "Grey oak" },
+  "Kvarts kulrang": { uz: "Kvarts kulrang", ru: "Серый кварц", en: "Quartz grey" },
+  "Oltin eman": { uz: "Oltin eman", ru: "Золотой дуб", en: "Golden oak" },
+  "Mokko eman": { uz: "Mokko eman", ru: "Дуб мокко", en: "Mocha oak" },
+  "Solod eman": { uz: "Solod eman", ru: "Солодовый дуб", en: "Malt oak" },
+  "Tog' emani": { uz: "Tog' emani", ru: "Высокогорный дуб", en: "Highland oak" },
+  "Beton eman": { uz: "Beton eman", ru: "Бетонный дуб", en: "Concrete oak" },
+  "Platina": { uz: "Platina", ru: "Платина", en: "Platinum" },
+};
 
 // imzo.uz'dan olingan real rang rasmlari bilan ishlaydi: swatch (tekstura) + oyna renderi.
 export default function ProductColors({
@@ -12,10 +30,11 @@ export default function ProductColors({
   name: string;
   colors: ProductColor[];
 }) {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   const [active, setActive] = useState(0);
   if (!colors || colors.length === 0) return null;
   const current = colors[active];
+  const tc = (nm: string) => COLOR_NAME_I18N[nm]?.[lang] ?? nm;
 
   return (
     <section className="py-16 sm:py-20 bg-white">
@@ -45,9 +64,9 @@ export default function ProductColors({
                   key={i}
                   onClick={() => setActive(i)}
                   className="flex flex-col items-center gap-1.5 group"
-                  aria-label={c.name}
+                  aria-label={tc(c.name)}
                   aria-pressed={isActive}
-                  title={c.name}
+                  title={tc(c.name)}
                 >
                   <span
                     className="w-full aspect-square rounded-2xl transition-all duration-200"
@@ -70,7 +89,7 @@ export default function ProductColors({
                       color: isActive ? "#0F766E" : "#64748b",
                     }}
                   >
-                    {c.name}
+                    {tc(c.name)}
                   </span>
                 </button>
               );
@@ -89,7 +108,7 @@ export default function ProductColors({
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={current.img}
-              alt={`${name} — ${current.name}`}
+              alt={`${name} — ${tc(current.name)}`}
               className="w-full object-contain"
               style={{ height: 360, maxHeight: "60vh" }}
             />

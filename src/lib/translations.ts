@@ -29,6 +29,9 @@ export const TRANSLATIONS = {
     "stats.projects": "Bajarilgan loyiha",
     "stats.warranty": "Kafolat muddati",
     "stats.quality": "Sifat nazorati",
+    "unit.year": "yil",
+    "unit.day": "kun",
+    "site.address": "Farg'ona tumani, Chimyon qishlog'i",
 
     // Products (home)
     "products.badge": "Mahsulot katalogi",
@@ -219,6 +222,9 @@ export const TRANSLATIONS = {
     "stats.projects": "Выполненных проектов",
     "stats.warranty": "Срок гарантии",
     "stats.quality": "Контроль качества",
+    "unit.year": "лет",
+    "unit.day": "дней",
+    "site.address": "Ферганский район, посёлок Чимён",
 
     "products.badge": "Каталог продукции",
     "products.heading": "Окна и Двери",
@@ -396,6 +402,9 @@ export const TRANSLATIONS = {
     "stats.projects": "Completed projects",
     "stats.warranty": "Warranty period",
     "stats.quality": "Quality control",
+    "unit.year": "years",
+    "unit.day": "days",
+    "site.address": "Farg'ona district, Chimyon village",
 
     "products.badge": "Product catalog",
     "products.heading": "Windows and Doors",
