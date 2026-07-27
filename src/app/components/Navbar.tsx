@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { Menu, MapPin, Phone, Ruler, X } from "lucide-react";
+import { ChevronDown, Menu, MapPin, Phone, Ruler, X } from "lucide-react";
 import { NAV_LINKS, SITE } from "@/src/lib/data";
 import logo from "@/public/logo.png";
 import { InstagramIcon, TelegramIcon, YoutubeIcon } from "./icons";
@@ -27,6 +27,7 @@ export default function Navbar() {
   const { t, lang, setLang } = useI18n();
   const [menuOpen, setMenuOpen] = useState(false);
   const [measureOpen, setMeasureOpen] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -38,6 +39,7 @@ export default function Navbar() {
 
   // Mobile menyu ochilganda body scroll'ni bloklash
   useEffect(() => {
+    if (!menuOpen) setLangOpen(false);
     if (menuOpen) {
       const prev = document.body.style.overflow;
       document.body.style.overflow = "hidden";
@@ -207,33 +209,65 @@ export default function Navbar() {
               </button>
             ))}
 
-            {/* Til tanlash — menyu uslubida */}
-            {LANGS.map((l) => {
-              const active = lang === l.code;
-              return (
-                <button
-                  key={l.code}
-                  onClick={() => setLang(l.code)}
-                  className="text-left px-5 py-4 rounded-2xl transition-all duration-200 active:scale-[0.98]"
-                  style={{
-                    background: active ? "#F0FDFA" : "#fff",
-                    border: active ? "1.5px solid #0F766E" : "1.5px solid #e2e8f0",
-                    fontWeight: 600,
-                    fontSize: 17,
-                    color: active ? "#0F766E" : "#012F33",
-                    boxShadow: "0 2px 8px rgba(1,47,51,0.04)",
-                  }}
-                  aria-pressed={active}
-                >
-                  <div className="flex items-center justify-between">
-                    <span>{LANG_FULL[l.code]}</span>
-                    <span style={{ color: "#0F766E", fontSize: 18 }}>
-                      {active ? "✓" : ""}
-                    </span>
-                  </div>
-                </button>
-              );
-            })}
+            {/* Til tanlash — dropdown (menyu uslubida) */}
+            <div>
+              <button
+                onClick={() => setLangOpen((v) => !v)}
+                className="w-full text-left px-5 py-4 rounded-2xl transition-all duration-200 active:scale-[0.98]"
+                style={{
+                  background: langOpen ? "#F0FDFA" : "#fff",
+                  border: langOpen ? "1.5px solid #0F766E" : "1.5px solid #e2e8f0",
+                  fontWeight: 600,
+                  fontSize: 17,
+                  color: "#012F33",
+                  boxShadow: "0 2px 8px rgba(1,47,51,0.04)",
+                }}
+                aria-expanded={langOpen}
+              >
+                <div className="flex items-center justify-between">
+                  <span>{LANG_FULL[lang]}</span>
+                  <ChevronDown
+                    size={20}
+                    style={{
+                      color: "#0F766E",
+                      transition: "transform 0.2s",
+                      transform: langOpen ? "rotate(180deg)" : "none",
+                    }}
+                  />
+                </div>
+              </button>
+
+              {langOpen && (
+                <div className="mt-1 flex flex-col gap-1 overflow-hidden">
+                  {LANGS.map((l) => {
+                    const active = lang === l.code;
+                    return (
+                      <button
+                        key={l.code}
+                        onClick={() => {
+                          setLang(l.code);
+                          setLangOpen(false);
+                        }}
+                        className="text-left px-5 py-3.5 rounded-xl transition-all duration-200 active:scale-[0.98]"
+                        style={{
+                          background: active ? "#F0FDFA" : "#fff",
+                          border: active ? "1.5px solid #0F766E" : "1.5px solid #e2e8f0",
+                          fontWeight: 600,
+                          fontSize: 16,
+                          color: active ? "#0F766E" : "#012F33",
+                        }}
+                        aria-pressed={active}
+                      >
+                        <div className="flex items-center justify-between">
+                          <span>{LANG_FULL[l.code]}</span>
+                          {active && <span style={{ color: "#0F766E", fontSize: 18 }}>✓</span>}
+                        </div>
+                      </button>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Bottom — Contact actions */}
