@@ -1,7 +1,15 @@
+"use client";
+
 import { CheckCircle, Clock, CreditCard, Shield } from "lucide-react";
 import { DEADLINES, SITE } from "@/src/lib/data";
+import { useI18n } from "@/src/lib/i18n";
+
+const DEADLINE_KEYS = ["terms.d1", "terms.d2", "terms.d3", "terms.d4"];
+const PAY_METHODS = ["terms.payCash", "terms.payCard", "terms.payTransfer"];
+const FREE_SERVICES = ["terms.free1", "terms.free2", "terms.free3"];
 
 export default function Terms() {
+  const { t } = useI18n();
   return (
     <section id="terms" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -15,7 +23,7 @@ export default function Terms() {
               fontWeight: 700,
             }}
           >
-            Shartlar va kafolatlar
+            {t("terms.badge")}
           </span>
           <h2
             style={{
@@ -24,7 +32,7 @@ export default function Terms() {
               fontSize: "clamp(1.6rem, 4vw, 2.5rem)",
             }}
           >
-            Hamkorlik shartlari
+            {t("terms.heading")}
           </h2>
         </div>
 
@@ -46,7 +54,7 @@ export default function Terms() {
                 marginBottom: 12,
               }}
             >
-              Kafolat
+              {t("terms.warranty")}
             </h3>
             <div
               style={{ color: "#5EEAD4", fontSize: "3rem", fontWeight: 900, lineHeight: 1 }}
@@ -54,17 +62,17 @@ export default function Terms() {
               {SITE.warrantyYears}
             </div>
             <div style={{ color: "#94a3b8", marginTop: 4, marginBottom: 16 }}>
-              yil kafolat muddati
+              {t("terms.warrantyYears")}
             </div>
             <div
               className="p-4 rounded-2xl"
               style={{ background: "rgba(255,255,255,0.07)" }}
             >
               <div style={{ color: "#99F6E4", fontWeight: 700, marginBottom: 4 }}>
-                Servis xizmati
+                {t("terms.service")}
               </div>
               <div style={{ color: "#cbd5e1" }}>
-                {SITE.serviceYears} yil davomida texnik xizmat ko'rsatiladi
+                {SITE.serviceYears} {t("terms.serviceDesc")}
               </div>
             </div>
           </div>
@@ -87,16 +95,18 @@ export default function Terms() {
                 marginBottom: 16,
               }}
             >
-              Bajarish muddatlari
+              {t("terms.deadlines")}
             </h3>
             <div className="space-y-3">
-              {DEADLINES.map((t) => (
+              {DEADLINES.map((d, i) => (
                 <div
-                  key={t.days}
+                  key={d.days}
                   className="flex items-center justify-between p-3 rounded-xl"
                   style={{ background: "#fff", border: "1px solid #e2e8f0" }}
                 >
-                  <span style={{ color: "#64748b", fontSize: 14 }}>{t.desc}</span>
+                  <span style={{ color: "#64748b", fontSize: 14 }}>
+                    {t(DEADLINE_KEYS[i] ?? d.desc)}
+                  </span>
                   <span
                     className="px-2.5 py-1 rounded-lg"
                     style={{
@@ -106,7 +116,7 @@ export default function Terms() {
                       fontWeight: 700,
                     }}
                   >
-                    {t.days}
+                    {d.days}
                   </span>
                 </div>
               ))}
@@ -131,7 +141,7 @@ export default function Terms() {
                 marginBottom: 16,
               }}
             >
-              To'lov shartlari
+              {t("terms.payment")}
             </h3>
             <div className="space-y-4">
               <div
@@ -146,13 +156,13 @@ export default function Terms() {
                     marginBottom: 6,
                   }}
                 >
-                  To'lov usullari
+                  {t("terms.payMethods")}
                 </div>
                 <div className="flex flex-col gap-1.5">
-                  {["Naqd pul", "Bank kartasi", "Pul o'tkazish"].map((m) => (
+                  {PAY_METHODS.map((m) => (
                     <div key={m} className="flex items-center gap-2">
                       <CheckCircle size={13} color="#0F766E" />
-                      <span style={{ color: "#64748b", fontSize: 13 }}>{m}</span>
+                      <span style={{ color: "#64748b", fontSize: 13 }}>{t(m)}</span>
                     </div>
                   ))}
                 </div>
@@ -165,7 +175,7 @@ export default function Terms() {
                 }}
               >
                 <div style={{ color: "#0F766E", fontWeight: 700, fontSize: 14 }}>
-                  To'lov tartibi
+                  {t("terms.payOrder")}
                 </div>
                 <div className="flex items-center justify-between mt-3">
                   <div className="text-center">
@@ -178,7 +188,7 @@ export default function Terms() {
                     >
                       70%
                     </div>
-                    <div style={{ color: "#64748b", fontSize: 12 }}>Oldindan</div>
+                    <div style={{ color: "#64748b", fontSize: 12 }}>{t("terms.payAdvance")}</div>
                   </div>
                   <div style={{ color: "#94a3b8", fontSize: 24 }}>+</div>
                   <div className="text-center">
@@ -191,7 +201,7 @@ export default function Terms() {
                     >
                       30%
                     </div>
-                    <div style={{ color: "#64748b", fontSize: 12 }}>Tayyor bo'lgach</div>
+                    <div style={{ color: "#64748b", fontSize: 12 }}>{t("terms.payAfter")}</div>
                   </div>
                 </div>
               </div>
@@ -211,16 +221,16 @@ export default function Terms() {
             className="text-center mb-6"
             style={{ color: "#065f46", fontWeight: 700, fontSize: "1.2rem" }}
           >
-            Quyidagi xizmatlarni ko'rsatamiz
+            {t("terms.freeTitle")}
           </h3>
           <div className="grid sm:grid-cols-3 gap-4">
-            {["O'lchov olish", "O'rnatish xizmati", "Konsultatsiya"].map((item) => (
+            {FREE_SERVICES.map((item) => (
               <div
                 key={item}
                 className="flex items-center gap-3 p-4 rounded-2xl bg-white"
               >
                 <CheckCircle size={22} color="#059669" />
-                <span style={{ color: "#065f46", fontWeight: 600 }}>{item}</span>
+                <span style={{ color: "#065f46", fontWeight: 600 }}>{t(item)}</span>
               </div>
             ))}
           </div>

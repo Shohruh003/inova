@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Ruler, Send, X } from "lucide-react";
+import { useI18n } from "@/src/lib/i18n";
 
 type Status = "idle" | "sending" | "success" | "error";
 
@@ -12,6 +13,7 @@ export default function MeasureModal({
   open: boolean;
   onClose: () => void;
 }) {
+  const { t } = useI18n();
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
   const [form, setForm] = useState({ name: "", phone: "", message: "" });
@@ -86,7 +88,7 @@ export default function MeasureModal({
         <button
           onClick={onClose}
           className="absolute top-4 right-4 p-1.5 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors"
-          aria-label="Yopish"
+          aria-label={t("measure.close")}
         >
           <X size={22} />
         </button>
@@ -99,12 +101,11 @@ export default function MeasureModal({
             <Ruler size={22} />
           </div>
           <h3 style={{ color: "#012F33", fontWeight: 800, fontSize: "1.35rem" }}>
-            Bepul o'lchash
+            {t("measure.title")}
           </h3>
         </div>
         <p style={{ color: "#64748b", fontSize: 14.5, marginBottom: 20 }}>
-          Ma'lumotlaringizni qoldiring — mutaxassisimiz siz bilan bog'lanib, qulay vaqtda
-          bepul o'lchov o'tkazadi.
+          {t("measure.subtitle")}
         </p>
 
         <form onSubmit={submit} className="flex flex-col gap-4">
@@ -118,11 +119,11 @@ export default function MeasureModal({
                 marginBottom: 6,
               }}
             >
-              Ismingiz
+              {t("contact.name")}
             </label>
             <input
               type="text"
-              placeholder="Ismingizni kiriting"
+              placeholder={t("contact.namePh")}
               required
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
@@ -145,7 +146,7 @@ export default function MeasureModal({
                 marginBottom: 6,
               }}
             >
-              Telefon raqam
+              {t("contact.phoneLabel")}
             </label>
             <input
               type="tel"
@@ -172,10 +173,10 @@ export default function MeasureModal({
                 marginBottom: 6,
               }}
             >
-              Manzil / izoh (ixtiyoriy)
+              {t("measure.addressLabel")}
             </label>
             <textarea
-              placeholder="Manzilingiz yoki qo'shimcha ma'lumot..."
+              placeholder={t("measure.addressPh")}
               rows={3}
               value={form.message}
               onChange={(e) => setForm({ ...form, message: e.target.value })}
@@ -199,7 +200,7 @@ export default function MeasureModal({
             }}
           >
             <Send size={18} />
-            {status === "sending" ? "Yuborilmoqda..." : "Yuborish"}
+            {status === "sending" ? t("contact.sending") : t("contact.send")}
           </button>
           {status === "success" && (
             <div
@@ -211,7 +212,7 @@ export default function MeasureModal({
                 fontWeight: 600,
               }}
             >
-              ✓ Murojaatingiz qabul qilindi! Tez orada bog'lanamiz.
+              {t("contact.success")}
             </div>
           )}
           {status === "error" && (
@@ -224,7 +225,7 @@ export default function MeasureModal({
                 fontWeight: 600,
               }}
             >
-              Xato: {error}
+              {t("contact.errPrefix")} {error}
             </div>
           )}
         </form>

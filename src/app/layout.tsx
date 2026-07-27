@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { SITE } from "@/src/lib/data";
+import { LanguageProvider } from "@/src/lib/i18n";
 import "./globals.css";
 
 const inter = Inter({
@@ -75,6 +76,7 @@ const jsonLd = {
   sameAs: [
     `https://t.me/${SITE.telegram}`,
     `https://instagram.com/${SITE.instagram}`,
+    `https://youtube.com/@${SITE.youtube}`,
   ],
 };
 
@@ -90,7 +92,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        {children}
+        <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
   );

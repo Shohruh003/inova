@@ -1,6 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import type { Product } from "@/src/lib/data";
+import { useI18n } from "@/src/lib/i18n";
+import { getProductText } from "@/src/lib/productI18n";
 
 export const BADGE_COLORS: Record<string, string> = {
   Premium: "linear-gradient(135deg, #7c3aed, #a78bfa)",
@@ -10,6 +14,8 @@ export const BADGE_COLORS: Record<string, string> = {
 };
 
 export default function ProductCard({ product: p }: { product: Product }) {
+  const { t, lang } = useI18n();
+  const tx = getProductText(p, lang);
   return (
     <div
       className="group rounded-3xl overflow-hidden bg-white transition-all duration-300 hover:-translate-y-2 flex flex-col"
@@ -45,11 +51,11 @@ export default function ProductCard({ product: p }: { product: Product }) {
             fontWeight: 700,
           }}
         >
-          {p.badge}
+          {t("badge." + p.badge)}
         </span>
         <div className="absolute bottom-4 left-6 right-6">
-          <span style={{ color: "rgba(255,255,255,0.85)", fontSize: 12 }}>{p.profile}</span>
-          <h3 style={{ color: "#fff", fontWeight: 800, fontSize: "1.4rem" }}>{p.name}</h3>
+          <span style={{ color: "rgba(255,255,255,0.85)", fontSize: 12 }}>{tx.profile}</span>
+          <h3 style={{ color: "#fff", fontWeight: 800, fontSize: "1.4rem" }}>{tx.name}</h3>
         </div>
       </Link>
 
@@ -66,11 +72,11 @@ export default function ProductCard({ product: p }: { product: Product }) {
             overflow: "hidden",
           }}
         >
-          {p.description}
+          {tx.description}
         </p>
-        {p.features.length > 0 && (
+        {tx.features.length > 0 && (
           <div className="grid grid-cols-2 gap-2 mb-6">
-            {p.features.slice(0, 4).map((f) => (
+            {tx.features.slice(0, 4).map((f) => (
               <div key={f} className="flex items-center gap-2">
                 <CheckCircle size={15} style={{ color: "#0F766E", flexShrink: 0 }} />
                 <span style={{ color: "#374151", fontSize: 13.5 }}>{f}</span>
@@ -88,7 +94,7 @@ export default function ProductCard({ product: p }: { product: Product }) {
               fontSize: 14.5,
             }}
           >
-            Batafsil
+            {t("card.details")}
             <ArrowRight size={16} />
           </Link>
           <Link
@@ -101,7 +107,7 @@ export default function ProductCard({ product: p }: { product: Product }) {
               fontSize: 14.5,
             }}
           >
-            Narx so'rash
+            {t("card.askPrice")}
           </Link>
         </div>
       </div>

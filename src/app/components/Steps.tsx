@@ -1,6 +1,19 @@
+"use client";
+
 import { STEPS } from "@/src/lib/data";
+import { useI18n } from "@/src/lib/i18n";
+
+const STEP_KEYS = [
+  ["steps.s1t", "steps.s1d"],
+  ["steps.s2t", "steps.s2d"],
+  ["steps.s3t", "steps.s3d"],
+  ["steps.s4t", "steps.s4d"],
+  ["steps.s5t", "steps.s5d"],
+  ["steps.s6t", "steps.s6d"],
+];
 
 export default function Steps() {
+  const { t } = useI18n();
   return (
     <section className="py-24" style={{ background: "#F0FDFA" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -14,7 +27,7 @@ export default function Steps() {
               fontWeight: 700,
             }}
           >
-            Jarayon
+            {t("steps.badge")}
           </span>
           <h2
             style={{
@@ -23,15 +36,15 @@ export default function Steps() {
               fontSize: "clamp(1.6rem, 4vw, 2.5rem)",
             }}
           >
-            Buyurtma berish jarayoni
+            {t("steps.heading")}
           </h2>
           <p className="mt-3 max-w-xl mx-auto" style={{ color: "#64748b", fontSize: 16 }}>
-            6 ta sodda qadam — natija sifatli va mustahkam
+            {t("steps.subtitle")}
           </p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {STEPS.map((step) => (
+          {STEPS.map((step, i) => (
             <div
               key={step.num}
               className="p-7 rounded-3xl bg-white relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
@@ -60,9 +73,11 @@ export default function Steps() {
                 </span>
               </div>
               <h3 style={{ color: "#012F33", fontWeight: 700, marginBottom: 8 }}>
-                {step.title}
+                {t(STEP_KEYS[i]?.[0] ?? step.title)}
               </h3>
-              <p style={{ color: "#64748b", fontSize: 14, lineHeight: 1.7 }}>{step.desc}</p>
+              <p style={{ color: "#64748b", fontSize: 14, lineHeight: 1.7 }}>
+                {t(STEP_KEYS[i]?.[1] ?? step.desc)}
+              </p>
             </div>
           ))}
         </div>

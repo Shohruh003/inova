@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import type { ProductColor } from "@/src/lib/productColors";
+import { useI18n } from "@/src/lib/i18n";
 
 // imzo.uz'dan olingan real rang rasmlari bilan ishlaydi: swatch (tekstura) + oyna renderi.
 export default function ProductColors({
@@ -11,6 +12,7 @@ export default function ProductColors({
   name: string;
   colors: ProductColor[];
 }) {
+  const { t } = useI18n();
   const [active, setActive] = useState(0);
   if (!colors || colors.length === 0) return null;
   const current = colors[active];
@@ -23,13 +25,13 @@ export default function ProductColors({
             className="inline-block px-4 py-1.5 rounded-full mb-4"
             style={{ background: "#CCFBF1", color: "#0F766E", fontSize: 13, fontWeight: 700 }}
           >
-            Ranglar
+            {t("colors.badge")}
           </span>
           <h2 style={{ color: "#012F33", fontWeight: 800, fontSize: "clamp(1.5rem, 3.5vw, 2.2rem)" }}>
-            Rangni tanlang
+            {t("colors.heading")}
           </h2>
           <p className="mt-3" style={{ color: "#64748b", fontSize: 15.5 }}>
-            {name} {colors.length} xil rang va qoplamada mavjud — namunani ko'rish uchun rangni tanlang.
+            {name} {colors.length} {t("colors.subtitle1")}
           </p>
         </div>
 
@@ -78,15 +80,18 @@ export default function ProductColors({
           {/* Tanlangan rangdagi render */}
           <div
             className="rounded-3xl bg-white p-6 sm:p-10 order-1 lg:order-2 flex items-center justify-center"
-            style={{ boxShadow: "0 4px 32px rgba(0,0,0,0.08)", border: "1px solid #f1f5f9" }}
+            style={{
+              boxShadow: "0 4px 32px rgba(0,0,0,0.08)",
+              border: "1px solid #f1f5f9",
+              minHeight: 320,
+            }}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              key={current.img}
               src={current.img}
               alt={`${name} — ${current.name}`}
               className="w-full object-contain"
-              style={{ maxHeight: 420 }}
+              style={{ height: 360, maxHeight: "60vh" }}
             />
           </div>
         </div>

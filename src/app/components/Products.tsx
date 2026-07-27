@@ -1,11 +1,15 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { PRODUCTS, FEATURED_SLUGS } from "@/src/lib/data";
 import ProductCard from "./ProductCard";
 import Reveal from "./Reveal";
+import { useI18n } from "@/src/lib/i18n";
 
-// Bosh sahifa bo'limi: 3 ta tanlangan mahsulot + to'liq katalogga havola.
+// Bosh sahifa bo'limi: tanlangan mahsulotlar + to'liq katalogga havola.
 export default function Products() {
+  const { t } = useI18n();
   const featured = FEATURED_SLUGS.map((slug) =>
     PRODUCTS.find((p) => p.slug === slug)
   ).filter((p): p is NonNullable<typeof p> => Boolean(p));
@@ -23,7 +27,7 @@ export default function Products() {
               fontWeight: 700,
             }}
           >
-            Mahsulot katalogi
+            {t("products.badge")}
           </span>
           <h2
             style={{
@@ -32,15 +36,13 @@ export default function Products() {
               fontSize: "clamp(1.6rem, 4vw, 2.5rem)",
             }}
           >
-            Romlar va Eshiklar
+            {t("products.heading")}
           </h2>
           <p
             className="mt-3 max-w-xl mx-auto"
             style={{ color: "#64748b", fontSize: 16, lineHeight: 1.7 }}
           >
-            Eng ko'p so'raladigan modellar bilan tanishing. To'liq katalogda{" "}
-            {PRODUCTS.length} ta mahsulot — plastik va alyumin romlar, eshiklar, surilma va
-            fasad tizimlari, import yechimlar va aksessuarlar.
+            {t("products.subtitle1")} {PRODUCTS.length} {t("products.subtitle2")}
           </p>
         </div>
 
@@ -63,12 +65,11 @@ export default function Products() {
               boxShadow: "0 8px 32px rgba(15,118,110,0.35)",
             }}
           >
-            Barcha mahsulotlarni ko'rish ({PRODUCTS.length})
+            {t("products.viewAll")} ({PRODUCTS.length})
             <ArrowRight size={18} />
           </Link>
           <p className="mt-6" style={{ color: "#94a3b8", fontSize: 14, lineHeight: 1.7 }}>
-            Mahsulot turlari va narxlar buyurtmaga qarab o'zgaradi. Aniq ma'lumot uchun
-            bog'laning.
+            {t("products.note")}
           </p>
         </div>
       </div>

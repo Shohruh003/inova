@@ -5,8 +5,9 @@ export const SITE = {
   phone: "+998911151133",
   phoneDisplay: "+998 91 115 11 33",
   phoneShort: "91-115-11-33",
-  telegram: "inova_akfa",
+  telegram: "inovaakfa",
   instagram: "inova.akfa",
+  youtube: "inovaakfa",
   mapUrl: "https://yandex.ru/maps/-/CPvWMW3V",
   address: "Farg'ona tumani, Chimyon qishlog'i",
   hours: "Dushanba – Shanba, 09:00 – 18:00",
@@ -156,7 +157,7 @@ export const PRODUCTS: Product[] = [
       "TRIO 6000 tizimi - ixcham profildan ishlab chiqarilgan va yuqori yorug'lik o'tkazuvchanligiga ega konstruksiyalar. INOVA dan Trio 6000 oynalari zamonaviy dizayn, ishonchlilik va energiya samaradorligini o'zida mujassam etgan…",
     features: [
       "3 kamerali profil",
-      "Profil devori 2,8 mm",
+      "Profil devori 2,5 mm",
       "Montaj kengligi 60 mm",
       "Tavaqa balandligi 2400 mm",
     ],
@@ -166,7 +167,7 @@ export const PRODUCTS: Product[] = [
     specs: [
       { label: "Profil turi", value: "PVX" },
       { label: "Kameralar soni", value: "3" },
-      { label: "Profil devorining qalinligi", value: "2,8 mm" },
+      { label: "Profil devorining qalinligi", value: "2,5 mm" },
       { label: "Montaj kengligi", value: "60 mm" },
       { label: "Tavaqaning maksimal balandligi", value: "2400 mm" },
       { label: "Tavaqaning maksimal kengligi", value: "1200 mm" },

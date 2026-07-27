@@ -1,8 +1,12 @@
+"use client";
+
 import { Phone } from "lucide-react";
 import { SITE } from "@/src/lib/data";
 import { TelegramIcon } from "./icons";
+import { useI18n } from "@/src/lib/i18n";
 
 export default function FloatingButtons() {
+  const { t } = useI18n();
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
       <a
@@ -20,7 +24,7 @@ export default function FloatingButtons() {
       </a>
       <a
         href={`tel:${SITE.phone}`}
-        aria-label="Telefon"
+        aria-label={t("contact.phone")}
         className="w-14 h-14 rounded-full flex items-center justify-center text-white shadow-2xl transition-all duration-200 hover:scale-110 pulse-soft"
         style={{ background: "linear-gradient(135deg, #059669, #10b981)" }}
       >

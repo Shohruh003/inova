@@ -1,17 +1,22 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, Phone } from "lucide-react";
 import { SITE } from "@/src/lib/data";
 import logo from "@/public/logo.png";
+import { useI18n } from "@/src/lib/i18n";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 // Ichki sahifalar (katalog, mahsulot detali) uchun yengil yopishqoq header.
 export default function SubpageHeader({
   backHref,
-  backLabel,
+  backKey,
 }: {
   backHref: string;
-  backLabel: string;
+  backKey: string;
 }) {
+  const { t } = useI18n();
   return (
     <header
       className="sticky top-0 z-50"
@@ -24,7 +29,7 @@ export default function SubpageHeader({
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <Link href="/" className="flex items-center gap-2.5" aria-label="Bosh sahifa">
+          <Link href="/" className="flex items-center gap-2.5" aria-label={t("nav.backHome")}>
             <div className="relative w-11 h-11 rounded-xl overflow-hidden flex items-center justify-center bg-white shadow-md">
               <Image src={logo} alt="INOVA logo" width={44} height={44} className="object-contain" />
             </div>
@@ -39,21 +44,24 @@ export default function SubpageHeader({
             style={{ color: "#374151", fontWeight: 500, fontSize: 15 }}
           >
             <ArrowLeft size={16} />
-            {backLabel}
+            {t(backKey)}
           </Link>
 
-          <a
-            href={`tel:${SITE.phone}`}
-            className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-white transition-all duration-200 hover:scale-105 hover:shadow-lg"
-            style={{
-              background: "linear-gradient(135deg, #013B41, #0F766E)",
-              fontWeight: 600,
-              fontSize: 15,
-            }}
-          >
-            <Phone size={16} />
-            <span className="hidden sm:inline">{SITE.phoneShort}</span>
-          </a>
+          <div className="flex items-center gap-3">
+            <LanguageSwitcher />
+            <a
+              href={`tel:${SITE.phone}`}
+              className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-white transition-all duration-200 hover:scale-105 hover:shadow-lg"
+              style={{
+                background: "linear-gradient(135deg, #013B41, #0F766E)",
+                fontWeight: 600,
+                fontSize: 15,
+              }}
+            >
+              <Phone size={16} />
+              <span className="hidden sm:inline">{SITE.phoneShort}</span>
+            </a>
+          </div>
         </div>
       </div>
     </header>

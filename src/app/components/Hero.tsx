@@ -5,8 +5,12 @@ import { ChevronDown, Phone, Star } from "lucide-react";
 import { IMAGES, SITE, STATS } from "@/src/lib/data";
 import CountUp from "./CountUp";
 import logo from "@/public/logo.png";
+import { useI18n } from "@/src/lib/i18n";
+
+const STAT_KEYS = ["stats.experience", "stats.projects", "stats.warranty", "stats.quality"];
 
 export default function Hero() {
+  const { t } = useI18n();
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
@@ -19,7 +23,7 @@ export default function Hero() {
     >
       <div className="absolute inset-0">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={IMAGES.hero} alt="INOVA eshik va rom" className="w-full h-full object-cover" />
+        <img src={IMAGES.hero} alt="INOVA" className="w-full h-full object-cover" />
 
         {/* Rasm ustidagi brend gradienti */}
         <div
@@ -59,7 +63,7 @@ export default function Hero() {
           >
             <Star size={14} fill="#5EEAD4" color="#5EEAD4" />
             <span style={{ color: "#99F6E4", fontSize: 13, fontWeight: 600 }}>
-              Farg'ona tumani — {SITE.experienceYears} yillik tajriba
+              {SITE.experienceYears} {t("hero.badge")}
             </span>
           </div>
 
@@ -67,10 +71,10 @@ export default function Hero() {
             className="text-white mb-6"
             style={{ fontSize: "clamp(2.2rem, 5vw, 3.8rem)", fontWeight: 800, lineHeight: 1.15 }}
           >
-            Zamonaviy{" "}
+            {t("hero.title1")}{" "}
             <span className="block sm:inline">
-              <span style={{ color: "#5EEAD4" }}>Eshik</span> va{" "}
-              <span style={{ color: "#5EEAD4" }}>Romlar</span>
+              <span style={{ color: "#5EEAD4" }}>{t("hero.title2")}</span>{" "}
+              <span style={{ color: "#5EEAD4" }}>{t("hero.title3")}</span>
             </span>
           </h1>
 
@@ -83,9 +87,7 @@ export default function Hero() {
               maxWidth: 620,
             }}
           >
-            INOVA kompaniyasi tomonidan <br className="sm:hidden" />PVC va ALYUMIN profillardan
-            tayyorlangan eshik va romlar — Chimyon qishlog'idan O'zbekiston bo'ylab. O'lchov,
-            yetkazib berish, o'rnatish va konsultatsiya xizmatlari mavjud.
+            {t("hero.desc")}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
@@ -101,7 +103,7 @@ export default function Hero() {
               }}
             >
               <Phone size={18} />
-              Konsultatsiya olish
+              {t("hero.cta1")}
             </button>
             <button
               type="button"
@@ -116,13 +118,13 @@ export default function Hero() {
                 backdropFilter: "blur(8px)",
               }}
             >
-              Mahsulotlarni ko'rish
+              {t("hero.cta2")}
               <ChevronDown size={18} />
             </button>
           </div>
 
           <div className="mt-10 sm:mt-16 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
-            {STATS.map((s) => (
+            {STATS.map((s, i) => (
               <div
                 key={s.label}
                 className="text-center p-4 rounded-2xl transition-transform duration-300 hover:-translate-y-1"
@@ -141,7 +143,9 @@ export default function Hero() {
                     color: "#5EEAD4",
                   }}
                 />
-                <div style={{ fontSize: 13, color: "#cbd5e1", marginTop: 2 }}>{s.label}</div>
+                <div style={{ fontSize: 13, color: "#cbd5e1", marginTop: 2 }}>
+                  {t(STAT_KEYS[i] ?? s.label)}
+                </div>
               </div>
             ))}
           </div>
@@ -149,7 +153,7 @@ export default function Hero() {
       </div>
 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
-        <span style={{ color: "rgba(255,255,255,0.5)", fontSize: 12 }}>Pastga</span>
+        <span style={{ color: "rgba(255,255,255,0.5)", fontSize: 12 }}>{t("hero.scroll")}</span>
         <ChevronDown size={20} color="rgba(255,255,255,0.5)" />
       </div>
     </section>

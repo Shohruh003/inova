@@ -1,14 +1,13 @@
+"use client";
+
 import { CheckCircle } from "lucide-react";
 import { IMAGES, SITE } from "@/src/lib/data";
+import { useI18n } from "@/src/lib/i18n";
 
-const POINTS = [
-  "Faqat sertifikatlangan mahsulotlar",
-  "14 yillik ishonchli tajriba",
-  "Har bir buyurtmaga individual yondashuv",
-  "Raqobatbardosh narxlar va sifat kafolati",
-];
+const POINT_KEYS = ["about.point1", "about.point2", "about.point3", "about.point4"];
 
 export default function About() {
+  const { t } = useI18n();
   return (
     <section
       className="relative py-24 overflow-hidden"
@@ -34,7 +33,7 @@ export default function About() {
                 border: "1px solid rgba(20,184,166,0.3)",
               }}
             >
-              Biz haqimizda
+              {t("about.badge")}
             </span>
             <h2
               style={{
@@ -44,15 +43,13 @@ export default function About() {
                 lineHeight: 1.3,
               }}
             >
-              Farg'ona tuman Chimyon qishlog'idan istalgan manzilga
+              {t("about.title")}
             </h2>
             <p className="mt-4" style={{ color: "#cbd5e1", lineHeight: 1.8, fontSize: 16 }}>
-              {SITE.experienceYears} yildan beri Farg'ona tumani Chimyon qishlog'ida faoliyat
-              yuritayotgan INOVA kompaniyasi PVC eshik va romlar sohasida ishonchli nom qozondi.
-              Bizda O'zbekiston bo'yicha barcha mahsulot turlari mavjud.
+              {SITE.experienceYears} {t("about.body1")}
             </p>
             <div className="mt-8 flex flex-col gap-4">
-              {POINTS.map((item) => (
+              {POINT_KEYS.map((item) => (
                 <div key={item} className="flex items-center gap-3">
                   <div
                     className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0"
@@ -63,7 +60,7 @@ export default function About() {
                   >
                     <CheckCircle size={14} color="#5EEAD4" />
                   </div>
-                  <span style={{ color: "#e2e8f0", fontSize: 15 }}>{item}</span>
+                  <span style={{ color: "#e2e8f0", fontSize: 15 }}>{t(item)}</span>
                 </div>
               ))}
             </div>
@@ -72,7 +69,7 @@ export default function About() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={IMAGES.building}
-              alt="INOVA bino"
+              alt="INOVA"
               className="w-full rounded-3xl object-cover"
               style={{ height: 380, boxShadow: "0 24px 64px rgba(0,0,0,0.4)" }}
             />
@@ -86,7 +83,7 @@ export default function About() {
               <div style={{ color: "#fff", fontSize: "2rem", fontWeight: 800 }}>
                 {SITE.experienceYears}+
               </div>
-              <div style={{ color: "#99F6E4", fontSize: 13 }}>Yil tajriba</div>
+              <div style={{ color: "#99F6E4", fontSize: 13 }}>{t("stats.experience")}</div>
             </div>
           </div>
         </div>

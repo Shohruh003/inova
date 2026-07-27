@@ -3,7 +3,14 @@
 import { useState } from "react";
 import { MapPin, Phone, Send } from "lucide-react";
 import { SITE } from "@/src/lib/data";
-import { InstagramIcon, TelegramIcon } from "./icons";
+import { InstagramIcon, TelegramIcon, YoutubeIcon } from "./icons";
+import { useI18n } from "@/src/lib/i18n";
+
+// Kartochka sarlavhasi -> tarjima kaliti (Telegram/Instagram brend nomlari o'zgarmaydi)
+const CARD_TITLE_KEY: Record<string, string> = {
+  Telefon: "contact.phone",
+  Manzil: "contact.address",
+};
 
 const CONTACT_CARDS = [
   {
@@ -28,6 +35,13 @@ const CONTACT_CARDS = [
     bg: "#fdf2f8",
   },
   {
+    icon: <YoutubeIcon size={22} color="#ff0000" />,
+    title: "YouTube",
+    value: `@${SITE.youtube}`,
+    href: `https://youtube.com/@${SITE.youtube}`,
+    bg: "#fef2f2",
+  },
+  {
     icon: <MapPin size={22} color="#ef4444" />,
     title: "Manzil",
     value: SITE.address,
@@ -39,6 +53,7 @@ const CONTACT_CARDS = [
 type Status = "idle" | "sending" | "success" | "error";
 
 export default function Contact() {
+  const { t } = useI18n();
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
   const [form, setForm] = useState({ name: "", phone: "", message: "" });
@@ -81,7 +96,7 @@ export default function Contact() {
               fontWeight: 700,
             }}
           >
-            Bog'lanish
+            {t("contact.badge")}
           </span>
           <h2
             style={{
@@ -90,10 +105,10 @@ export default function Contact() {
               fontSize: "clamp(1.6rem, 4vw, 2.5rem)",
             }}
           >
-            Biz bilan aloqaga chiqing
+            {t("contact.heading")}
           </h2>
           <p className="mt-3" style={{ color: "#64748b", fontSize: 16 }}>
-            Konsultatsiya uchun hoziroq murojaat qiling
+            {t("contact.subtitle")}
           </p>
         </div>
 
@@ -129,7 +144,7 @@ export default function Contact() {
                       letterSpacing: "0.05em",
                     }}
                   >
-                    {c.title}
+                    {CARD_TITLE_KEY[c.title] ? t(CARD_TITLE_KEY[c.title]) : c.title}
                   </div>
                   <div
                     style={{
@@ -153,10 +168,10 @@ export default function Contact() {
               style={{ background: "linear-gradient(135deg, #012F33, #0F4042)" }}
             >
               <div style={{ color: "#94a3b8", fontSize: 13, marginBottom: 8 }}>
-                Ish vaqtlari
+                {t("contact.hours")}
               </div>
               <div style={{ color: "#fff", fontWeight: 700, fontSize: 16 }}>
-                Dushanba – Shanba
+                {t("contact.hoursDays")}
               </div>
               <div
                 style={{ color: "#5EEAD4", fontWeight: 700, fontSize: 20, marginTop: 4 }}
@@ -179,7 +194,7 @@ export default function Contact() {
                 marginBottom: 20,
               }}
             >
-              Tez murojaat
+              {t("contact.formTitle")}
             </h3>
             <form onSubmit={submit} className="flex flex-col gap-4">
               <div>
@@ -192,11 +207,11 @@ export default function Contact() {
                     marginBottom: 6,
                   }}
                 >
-                  Ismingiz
+                  {t("contact.name")}
                 </label>
                 <input
                   type="text"
-                  placeholder="Ismingizni kiriting"
+                  placeholder={t("contact.namePh")}
                   required
                   value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
@@ -219,7 +234,7 @@ export default function Contact() {
                     marginBottom: 6,
                   }}
                 >
-                  Telefon raqam
+                  {t("contact.phoneLabel")}
                 </label>
                 <input
                   type="tel"
@@ -246,10 +261,10 @@ export default function Contact() {
                     marginBottom: 6,
                   }}
                 >
-                  Xabar (ixtiyoriy)
+                  {t("contact.message")}
                 </label>
                 <textarea
-                  placeholder="Qanday xizmat kerak? Qo'shimcha ma'lumot..."
+                  placeholder={t("contact.messagePh")}
                   rows={4}
                   value={form.message}
                   onChange={(e) => setForm({ ...form, message: e.target.value })}
@@ -273,7 +288,7 @@ export default function Contact() {
                 }}
               >
                 <Send size={18} />
-                {status === "sending" ? "Yuborilmoqda..." : "Yuborish"}
+                {status === "sending" ? t("contact.sending") : t("contact.send")}
               </button>
               {status === "success" && (
                 <div
@@ -285,7 +300,7 @@ export default function Contact() {
                     fontWeight: 600,
                   }}
                 >
-                  ✓ Murojaatingiz qabul qilindi! Tez orada bog'lanamiz.
+                  {t("contact.success")}
                 </div>
               )}
               {status === "error" && (
@@ -298,7 +313,7 @@ export default function Contact() {
                     fontWeight: 600,
                   }}
                 >
-                  Xato: {error}
+                  {t("contact.errPrefix")} {error}
                 </div>
               )}
             </form>

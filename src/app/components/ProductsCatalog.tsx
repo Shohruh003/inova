@@ -4,9 +4,11 @@ import { useState } from "react";
 import { PRODUCTS, PRODUCT_CATEGORIES } from "@/src/lib/data";
 import ProductCard from "./ProductCard";
 import Reveal from "./Reveal";
+import { useI18n } from "@/src/lib/i18n";
 
 // To'liq katalog: kategoriya filtri + barcha mahsulot kartalari (/products sahifasida).
 export default function ProductsCatalog() {
+  const { t } = useI18n();
   const [category, setCategory] = useState<string>("all");
 
   const visible =
@@ -26,6 +28,7 @@ export default function ProductsCatalog() {
             PRODUCTS.some((p) => p.category === c.id)
           ),
         ].map((c) => {
+          const label = c.id === "all" ? t("catalog.all") : t("cat." + c.id);
           const active = category === c.id;
           const count =
             c.id === "all"
@@ -45,7 +48,7 @@ export default function ProductsCatalog() {
                 boxShadow: active ? "0 4px 16px rgba(15,118,110,0.3)" : "none",
               }}
             >
-              {c.label}
+              {label}
               <span className="ml-1.5" style={{ fontSize: 12, opacity: 0.7 }}>
                 {count}
               </span>

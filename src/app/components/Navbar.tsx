@@ -5,10 +5,23 @@ import { useEffect, useState } from "react";
 import { Menu, MapPin, Phone, Ruler, X } from "lucide-react";
 import { NAV_LINKS, SITE } from "@/src/lib/data";
 import logo from "@/public/logo.png";
-import { InstagramIcon, TelegramIcon } from "./icons";
+import { InstagramIcon, TelegramIcon, YoutubeIcon } from "./icons";
 import MeasureModal from "./MeasureModal";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { useI18n } from "@/src/lib/i18n";
+
+// Nav havola href -> tarjima kaliti
+const NAV_KEY: Record<string, string> = {
+  "#home": "nav.home",
+  "#products": "nav.products",
+  "#services": "nav.services",
+  "#terms": "nav.terms",
+  "#gallery": "nav.gallery",
+  "#contact": "nav.contact",
+};
 
 export default function Navbar() {
+  const { t } = useI18n();
   const [menuOpen, setMenuOpen] = useState(false);
   const [measureOpen, setMeasureOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -55,30 +68,33 @@ export default function Navbar() {
         }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Mobile top bar: qo'ng'iroq + Bepul o'lchash (imzo kabi eng tepada) */}
-          <div className="flex md:hidden items-center justify-between pt-3 pb-2 relative z-[60]">
+          {/* Mobile top bar: qo'ng'iroq + til + Bepul o'lchash (imzo kabi eng tepada) */}
+          <div className="flex md:hidden items-center justify-between pt-3 pb-2 relative z-[60] gap-2">
             <a
               href={`tel:${SITE.phone}`}
               className="flex items-center justify-center w-10 h-10 rounded-full flex-shrink-0 shadow-md active:scale-95 transition-transform"
               style={{ background: "linear-gradient(135deg, #013B41, #0F766E)", color: "#fff" }}
-              aria-label="Qo'ng'iroq qilish"
+              aria-label={t("nav.call")}
             >
               <Phone size={18} />
             </a>
-            <button
-              onClick={() => setMeasureOpen(true)}
-              className="flex items-center gap-2 px-5 h-10 rounded-full shadow-md active:scale-95 transition-transform"
-              style={{
-                background: "linear-gradient(135deg, #013B41, #0F766E)",
-                color: "#fff",
-                fontWeight: 700,
-                fontSize: 14,
-              }}
-              aria-label="Bepul o'lchash"
-            >
-              <Ruler size={16} />
-              Bepul o'lchash
-            </button>
+            <div className="flex items-center gap-2">
+              <LanguageSwitcher />
+              <button
+                onClick={() => setMeasureOpen(true)}
+                className="flex items-center gap-1.5 px-3.5 h-10 rounded-full shadow-md active:scale-95 transition-transform"
+                style={{
+                  background: "linear-gradient(135deg, #013B41, #0F766E)",
+                  color: "#fff",
+                  fontWeight: 700,
+                  fontSize: 13,
+                }}
+                aria-label={t("nav.measure")}
+              >
+                <Ruler size={15} />
+                {t("nav.measure")}
+              </button>
+            </div>
           </div>
 
           <div className="flex items-center justify-between h-14 md:h-20">
@@ -86,7 +102,7 @@ export default function Navbar() {
             <button
               onClick={() => scrollTo("#home")}
               className="flex items-center gap-2.5 group relative z-[60]"
-              aria-label="Bosh sahifa"
+              aria-label={t("nav.backHome")}
             >
               <div className="relative w-11 h-11 rounded-xl overflow-hidden flex items-center justify-center bg-white shadow-md">
                 <Image
@@ -124,13 +140,14 @@ export default function Navbar() {
                     textShadow: hasBg ? "none" : "0 1px 6px rgba(0,0,0,0.3)",
                   }}
                 >
-                  {link.label}
+                  {t(NAV_KEY[link.href] ?? link.href)}
                 </button>
               ))}
             </div>
 
             {/* CTA Button (Desktop) */}
             <div className="hidden md:flex items-center gap-3">
+              <LanguageSwitcher dark={!hasBg} />
               <button
                 onClick={() => setMeasureOpen(true)}
                 className="flex items-center gap-2 px-5 py-2.5 rounded-xl transition-all duration-200 hover:scale-105 hover:shadow-md cursor-pointer"
@@ -144,7 +161,7 @@ export default function Navbar() {
                 }}
               >
                 <Ruler size={16} />
-                Bepul o'lchash
+                {t("nav.measure")}
               </button>
               <a
                 href={`tel:${SITE.phone}`}
@@ -165,7 +182,7 @@ export default function Navbar() {
               className="md:hidden p-1.5 rounded-lg relative z-[60]"
               style={{ color: hasBg || menuOpen ? "#012F33" : "#fff" }}
               onClick={() => setMenuOpen(!menuOpen)}
-              aria-label="Menyu"
+              aria-label={t("nav.menu")}
               aria-expanded={menuOpen}
             >
               {menuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -209,7 +226,7 @@ export default function Navbar() {
                 }}
               >
                 <div className="flex items-center justify-between">
-                  <span>{link.label}</span>
+                  <span>{t(NAV_KEY[link.href] ?? link.href)}</span>
                   <span style={{ color: "#0F766E", fontSize: 20 }}>→</span>
                 </div>
               </button>
@@ -231,7 +248,7 @@ export default function Navbar() {
               {SITE.phoneDisplay}
             </a>
 
-            <div className="grid grid-cols-3 gap-3">
+            <div className="grid grid-cols-4 gap-3">
               <a
                 href={`https://t.me/${SITE.telegram}`}
                 target="_blank"
@@ -261,6 +278,20 @@ export default function Navbar() {
                 <InstagramIcon size={22} color="#e1306c" />
               </a>
               <a
+                href={`https://youtube.com/@${SITE.youtube}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center py-3.5 rounded-xl"
+                style={{
+                  background: "#fef2f2",
+                  border: "1.5px solid #fecaca",
+                  color: "#ff0000",
+                }}
+                aria-label="YouTube"
+              >
+                <YoutubeIcon size={22} color="#ff0000" />
+              </a>
+              <a
                 href={SITE.mapUrl}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -270,7 +301,7 @@ export default function Navbar() {
                   border: "1.5px solid #fecaca",
                   color: "#ef4444",
                 }}
-                aria-label="Manzil"
+                aria-label={t("contact.address")}
               >
                 <MapPin size={22} />
               </a>
@@ -280,7 +311,7 @@ export default function Navbar() {
               className="text-center mt-2"
               style={{ color: "#64748b", fontSize: 13 }}
             >
-              {SITE.address} · {SITE.hours}
+              {SITE.address} · {t("contact.hoursDays")}, 09:00 – 18:00
             </div>
           </div>
         </div>

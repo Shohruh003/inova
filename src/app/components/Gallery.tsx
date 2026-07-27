@@ -5,8 +5,10 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { GALLERY } from "@/src/lib/data";
+import { useI18n } from "@/src/lib/i18n";
 
 export default function Gallery() {
+  const { t } = useI18n();
   const autoplay = useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true, align: "start" },
@@ -41,7 +43,7 @@ export default function Gallery() {
               border: "1px solid rgba(20,184,166,0.3)",
             }}
           >
-            Galereya
+            {t("gallery.badge")}
           </span>
           <h2
             style={{
@@ -50,7 +52,7 @@ export default function Gallery() {
               fontSize: "clamp(1.6rem, 4vw, 2.5rem)",
             }}
           >
-            Bajarilgan ishlarimiz
+            {t("gallery.heading")}
           </h2>
         </div>
 
@@ -74,7 +76,7 @@ export default function Gallery() {
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={img}
-                      alt={`INOVA loyihasi ${i + 1}`}
+                      alt={`INOVA ${i + 1}`}
                       loading="lazy"
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
@@ -87,7 +89,7 @@ export default function Gallery() {
           {/* Oldinga / orqaga tugmalar */}
           <button
             onClick={scrollPrev}
-            aria-label="Oldingi rasm"
+            aria-label={t("gallery.prev")}
             className="absolute top-1/2 -translate-y-1/2 left-2 sm:-left-5 w-11 h-11 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110"
             style={{
               background: "rgba(255,255,255,0.92)",
@@ -99,7 +101,7 @@ export default function Gallery() {
           </button>
           <button
             onClick={scrollNext}
-            aria-label="Keyingi rasm"
+            aria-label={t("gallery.next")}
             className="absolute top-1/2 -translate-y-1/2 right-2 sm:-right-5 w-11 h-11 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110"
             style={{
               background: "rgba(255,255,255,0.92)",
@@ -117,7 +119,7 @@ export default function Gallery() {
             <button
               key={i}
               onClick={() => emblaApi?.scrollTo(i)}
-              aria-label={`${i + 1}-rasmga o'tish`}
+              aria-label={`${i + 1}`}
               className="rounded-full transition-all duration-300"
               style={{
                 width: selected === i ? 26 : 9,
