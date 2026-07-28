@@ -48,7 +48,7 @@ export default function Partners() {
                 src={src}
                 alt="INOVA hamkori"
                 loading="lazy"
-                className="max-h-12 w-auto object-contain grayscale opacity-70 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100"
+                className="max-h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
               />
             </div>
           ))}
