@@ -61,7 +61,11 @@ export default function Hero() {
               border: "1px solid rgba(20,184,166,0.4)",
             }}
           >
-            <Star size={14} fill="#5EEAD4" color="#5EEAD4" />
+            <span className="flex items-center gap-0.5">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <Star key={i} size={14} fill="#FFD700" color="#FFD700" />
+              ))}
+            </span>
             <span style={{ color: "#99F6E4", fontSize: 13, fontWeight: 600 }}>
               {SITE.experienceYears} {t("hero.badge")}
             </span>

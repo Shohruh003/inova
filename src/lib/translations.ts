@@ -113,6 +113,9 @@ export const TRANSLATIONS = {
     "gallery.heading": "Bajarilgan ishlarimiz",
     "gallery.prev": "Oldingi rasm",
     "gallery.next": "Keyingi rasm",
+    "partners.badge": "Hamkorlar",
+    "partners.heading": "Hamkorlarimiz",
+    "partners.subtitle": "Biz dunyoning ishonchli brendlari bilan hamkorlik qilamiz",
 
     // Contact
     "contact.badge": "Bog'lanish",
@@ -300,6 +303,9 @@ export const TRANSLATIONS = {
     "gallery.heading": "Наши выполненные работы",
     "gallery.prev": "Предыдущее фото",
     "gallery.next": "Следующее фото",
+    "partners.badge": "Партнёры",
+    "partners.heading": "Наши партнёры",
+    "partners.subtitle": "Мы сотрудничаем с надёжными мировыми брендами",
 
     "contact.badge": "Связь",
     "contact.heading": "Свяжитесь с нами",
@@ -480,6 +486,9 @@ export const TRANSLATIONS = {
     "gallery.heading": "Our completed work",
     "gallery.prev": "Previous image",
     "gallery.next": "Next image",
+    "partners.badge": "Partners",
+    "partners.heading": "Our partners",
+    "partners.subtitle": "We work with trusted global brands",
 
     "contact.badge": "Contact",
     "contact.heading": "Get in touch with us",

@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Gallery from "./components/Gallery";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
+import Partners from "./components/Partners";
 import Products from "./components/Products";
 import Reveal from "./components/Reveal";
 import Services from "./components/Services";
@@ -33,6 +34,9 @@ export default function Home() {
       </Reveal>
       <Reveal>
         <Gallery />
+      </Reveal>
+      <Reveal>
+        <Partners />
       </Reveal>
       <Reveal>
         <Contact />
